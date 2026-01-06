@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المالية - Million Marketer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-flex flex-column" id="sidebar">
+            <div class="sidebar-header p-4 d-flex align-items-center gap-3">
+                <div class="logo-icon">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <div class="logo-text text-white">
+                    <div class="fw-bold">المــــليون مــــسوق</div>
+                    <small>Million Marketer</small>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav flex-grow-1 px-2 pt-3">
+                <ul class="nav flex-column gap-1">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-box-seam"></i>
+                            <span>المنتجات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="myproducts.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                            <span>منتجاتي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="finance.html" class="nav-link active rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-wallet2"></i>
+                            <span>المالية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="report.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span>التقارير</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="notifications.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-bell"></i>
+                            <span>الإشعارات</span>
+                        </a>
+                    </li>
+                    <!-- Settings Menu -->
+                    <li class="nav-item">
+                        <a href="#settingsSubmenu" class="nav-link rounded-3 d-flex align-items-center gap-2 collapsed"
+                            data-bs-toggle="collapse" role="button" aria-expanded="false"
+                            aria-controls="settingsSubmenu">
+                            <i class="bi bi-gear"></i>
+                            <span>الإعدادات</span>
+                            <i class="bi bi-chevron-down ms-auto small"></i>
+                        </a>
+                        <div class="collapse settings-submenu mt-1" id="settingsSubmenu">
+                            <ul class="nav flex-column gap-1 pe-3">
+                                <li class="nav-item">
+                                    <a href="settings_profile.html"
+                                        class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-circle-fill" style="font-size: 6px;"></i>
+                                        <span>الملف الشخصي</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="settings_landing.html"
+                                        class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-circle-fill" style="font-size: 6px;"></i>
+                                        <span>إعدادات صفحة الهبوط</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-circle-fill" style="font-size: 6px;"></i>
+                                        <span>إعدادات المالية</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer Links -->
+            <div class="sidebar-footer p-3 border-top">
+                <a href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none py-2 px-3 rounded-3 footer-link">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>صفحة العقود</span>
+                </a>
+                <a href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none py-2 px-3 rounded-3 footer-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>تسجيل خروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content flex-grow-1">
+            <!-- Header -->
+            <header
+                class="bg-white py-3 px-4 border-bottom d-flex align-items-center justify-content-between sticky-top">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="sidebar-toggle" id="sidebarToggle" type="button">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <!-- Search Bar -->
+                    <div class="position-relative header-search">
+                        <input type="text" class="form-control bg-light border-0 ps-5 rounded-3 py-2"
+                            placeholder="البحث">
+                        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown">
+                        <button class="notification-btn btn rounded-3 position-relative" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <i class="bi bi-bell fs-5 text-secondary"></i>
+                            <span
+                                class="position-absolute top-0 start-0 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-start notifications-dropdown p-0 shadow-lg">
+                            <div
+                                class="notifications-header d-flex justify-content-between align-items-center p-3 border-bottom">
+                                <button class="btn btn-sm btn-light text-muted">وضع الكل كمقروء</button>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-bold">الاشـعـارات</span>
+                                    <i class="bi bi-bell text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="notifications-list">
+                                <a href="#"
+                                    class="notification-item unread d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <span class="unread-dot"></span>
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <a href="#"
+                                    class="notification-item unread d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <span class="unread-dot"></span>
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                            </div>
+                            <div class="notifications-footer text-center p-3 border-top">
+                                <a href="notifications.html" class="text-decoration-none text-muted small">عرض الكل</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- landing page Button A -->
+                    <a href="store/pages/home.html"
+                        class="notification-btn btn rounded-3 text-decoration-none text-dark fw-bold" type="button">
+                        A
+                    </a>
+                    <!-- Profile Page -->
+                    <a href="settings_profile.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                        <img src="https://ui-avatars.com/api/?name=Abu+Ghazi&background=random" alt="User"
+                            class="rounded-circle user-avatar" width="45" height="45">
+                        <div class="d-none d-sm-block">
+                            <div class="fw-bold small text-dark">أبو غازي العتيبي</div>
+                            <div class="text-muted small" style="font-size: 11px;">aboghazi@gmail.com</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <div class="content-area p-4">
+
+                <!-- Page Title -->
+                <div class="mb-4">
+                    <h5 class="fw-bold mb-1">تابع أرباحك، عمولاتك، معاملاتك، وطلبات السحب بسهولة من مكان واحد.</h5>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <!-- Available Balance -->
+                    <div class="col-md-4">
+                        <div class="stat-card bg-white p-4 h-100 d-flex flex-column justify-content-between">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h3 class="fw-bold mb-1">3000 <small class="fs-6 text-muted">ر.س</small></h3>
+                                    <div class="text-secondary small">الرصيد المتاح للسحب</div>
+                                </div>
+                                <button class="btn btn-action-olive" data-bs-toggle="modal"
+                                    data-bs-target="#withdrawModal">سحب الرصيد</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pending Balance -->
+                    <div class="col-md-4">
+                        <div class="stat-card bg-white p-4 h-100 d-flex flex-column justify-content-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h3 class="fw-bold mb-1">2500 <small class="fs-6 text-muted">ر.س</small></h3>
+                                    <div class="text-secondary small">الرصيد المعلق</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Withdrawal -->
+                    <div class="col-md-4">
+                        <div class="stat-card bg-white p-4 h-100 d-flex flex-column justify-content-between">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <h3 class="fw-bold mb-1">300 <small class="fs-6 text-muted">ر.س</small></h3>
+                                    <div class="text-secondary small">اخر طلب سحب</div>
+                                </div>
+
+                                <div class="flex-column align-items-center mt-2">
+                                    <small class="text-muted">25/9/2025</small>
+                                    <span class="badge bg-warning-subtle text-warning status-badge">قيد المراجعة</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Section -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <!-- Toolbar -->
+                        <div
+                            class="finance-toolbar d-flex flex-wrap gap-3 justify-content-between align-items-center mb-4">
+                            <!-- Left Side: Export & Filters -->
+                            <div class="finance-toolbar-filters d-flex gap-2 flex-grow-1 flex-wrap align-items-center">
+                                <button class="btn btn-export shadow-sm"><i class="bi bi-upload"></i> تصدير</button>
+
+                                <div class="input-group w-auto bg-light rounded-3 overflow-hidden border">
+                                    <span class="input-group-text bg-transparent border-0"><i
+                                            class="bi bi-calendar4"></i></span>
+                                    <input type="text" class="form-control bg-transparent border-0 shadow-none"
+                                        placeholder="4 يونيو - 2 سبتمبر , 2025" style="font-size: 13px; width: 180px;">
+                                </div>
+
+                                <div class="dropdown">
+                                    <button
+                                        class="btn btn-light border bg-light w-100 d-flex justify-content-between align-items-center gap-3"
+                                        type="button">
+                                        <span class="text-muted small">تصفية حسب الحالة</span>
+                                        <i class="bi bi-chevron-down small"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Right Side: Toggle Buttons -->
+                            <div class="btn-toggle-group">
+                                <button class="btn-toggle-option">
+                                    <i class="bi bi-cash-stack"></i>
+                                    طلبات السحب
+                                </button>
+                                <button class="btn-toggle-option active">
+                                    <i class="bi bi-receipt"></i>
+                                    الفواتير والعمولات
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Orders Table -->
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead>
+                                    <tr class="text-secondary small">
+                                        <th class="fw-normal">رقم الطلب</th>
+                                        <th class="fw-normal">رقم الفاتورة</th>
+                                        <th class="fw-normal">اسم التاجر</th>
+                                        <th class="fw-normal">تاريخ البيع</th>
+                                        <th class="fw-normal">اجمالي قيمة الطلب</th>
+                                        <th class="fw-normal">قيمة العمولة</th>
+                                        <th class="fw-normal">حالة الطلب</th>
+                                        <th class="fw-normal">اجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Row 1: Processing -->
+                                    <tr class="table-row-processing order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-green">40 <small>﷼</small></span></td>
+                                        <td><span class="badge-processing">قيد التجهيز</span></td>
+                                        <td><button class="btn-view-details" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailsModal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 2: Cancelled -->
+                                    <tr class="order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-red">0 <small>﷼</small></span></td>
+                                        <td><span class="badge-cancelled">ملغي</span></td>
+                                        <td><button class="btn-view-details" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailsModal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 3: Completed -->
+                                    <tr class="order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-green">40 <small>﷼</small></span></td>
+                                        <td><span class="badge-completed">مكتمل</span></td>
+                                        <td><button class="btn-view-details" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailsModal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 4: Completed -->
+                                    <tr class="order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-green">40 <small>﷼</small></span></td>
+                                        <td><span class="badge-completed">مكتمل</span></td>
+                                        <td><button class="btn-view-details" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailsModal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 5: Completed -->
+                                    <tr class="order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-green">40 <small>﷼</small></span></td>
+                                        <td><span class="badge-completed">مكتمل</span></td>
+                                        <td><button class="btn-view-details" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailsModal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 6: Cancelled -->
+                                    <tr class="order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-red">0 <small>﷼</small></span></td>
+                                        <td><span class="badge-cancelled">ملغي</span></td>
+                                        <td><button class="btn-view-details" data-bs-toggle="modal"
+                                                data-bs-target="#orderDetailsModal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 7: Completed -->
+                                    <tr class="order-row" role="button" data-bs-toggle="modal"
+                                        data-bs-target="#orderDetailsModal" style="cursor: pointer;">
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-green">40 <small>﷼</small></span></td>
+                                        <td><span class="badge-completed">مكتمل</span></td>
+                                        <td><button class="btn-view-details"><i class="bi bi-eye"></i></button></td>
+                                    </tr>
+                                    <!-- Row 8: Completed -->
+                                    <tr>
+                                        <td class="fw-bold">#SLL12345</td>
+                                        <td>INV-2025-0001</td>
+                                        <td>متجر التقنية الحديث</td>
+                                        <td>12-8-2025</td>
+                                        <td class="fw-bold"><i class="bi bi-currency-bitcoin small text-muted"></i> 150
+                                        </td>
+                                        <td><span class="text-commission-green">40 <small>﷼</small></span></td>
+                                        <td><span class="badge-completed">مكتمل</span></td>
+                                        <td><button class="btn-view-details"><i class="bi bi-eye"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Pagination -->
+                        </nav>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+
+
+    <!-- Withdraw Modal -->
+    <div class="modal fade modal-withdraw" id="withdrawModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">سحب الرصيد</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Method -->
+                        <div class="mb-3">
+                            <label class="modal-label">طريقة السحب</label>
+                            <select class="form-select">
+                                <option selected disabled>اختر طريقة السحب</option>
+                                <option value="bank">تحويل بنكي</option>
+                                <option value="stc">STC Pay</option>
+                            </select>
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="mb-4">
+                            <label class="modal-label">المبلغ الذي تريد سحبه</label>
+                            <div class="custom-input-group">
+                                <input type="number" class="form-control" placeholder="اكتب المبلغ">
+                                <span class="currency-icon-input">﷼</span>
+                            </div>
+                        </div>
+
+                        <!-- Warning -->
+                        <div class="withdraw-warning">
+                            <span>الحد الأدنى للسحب هو 100 ﷼</span>
+                            <i class="bi bi-exclamation-triangle-fill warning-icon"></i>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="button" class="btn-submit">اسحب الرصيد</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
+                <!-- Header -->
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <!-- Top Section -->
+                    <div class="row mb-4">
+                        <!-- Right Side (RTL): Logo & Order Info - appears first -->
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="modal-logo">
+                                    <i class="bi bi-shop"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">المـليـون مـسـوق</div>
+                                    <small class="text-muted">Million Marketer</small>
+                                </div>
+                            </div>
+
+                            <div class="order-details-info">
+                                <div class="mb-1">
+                                    <span class="text-secondary small">رقم الطلب :</span>
+                                    <span class="fw-bold">#SLL12345</span>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="text-secondary small">تاريخ البيع :</span>
+                                    <span>2025-7-30 | 3:00 م</span>
+                                </div>
+                                <div class="mb-1">
+                                    <span class="text-secondary small">اسم المسوق :</span>
+                                    <span class="fw-bold">غازي العتيبي</span>
+                                </div>
+                                <div>
+                                    <span class="text-secondary small">البريد الالكتروني :</span>
+                                    <span dir="ltr">ghaziiotaibi@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left Side (RTL): QR & Invoice Info - appears second -->
+                        <div class="col-md-6 text-md-start">
+                            <button class="btn btn-download-invoice mb-3">
+                                <i class="bi bi-download"></i> تنزيل
+                            </button>
+
+                            <div class="d-flex gap-3 align-items-start flex-row-reverse justify-content-end">
+                                <div class="invoice-info text-start">
+                                    <div class="mb-2">
+                                        <span class="text-secondary small">رقم الفاتورة :</span>
+                                        <span class="fw-bold">INV-2025-0001</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="text-secondary small">اسم المتجر :</span>
+                                        <span class="fw-bold">متجر التقنية الحديث</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-secondary small">حالة الفاتورة :</span>
+                                        <span class="badge-pending-invoice">معلقة</span>
+                                    </div>
+                                </div>
+
+                                <!-- QR Code -->
+                                <div class="qr-code-box">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=INV-2025-0001"
+                                        alt="QR Code">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Table -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle order-products-table"
+                            style="--bs-table-bg: transparent;">
+                            <thead class="table-dark">
+                                <tr class="text-center small">
+                                    <th>#</th>
+                                    <th>صورة المنتج</th>
+                                    <th>اسم المنتج</th>
+                                    <th>الكمية</th>
+                                    <th>السعر</th>
+                                    <th>اجمالي السعر</th>
+                                    <th>العمولة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <td>1</td>
+                                    <td>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=50&h=50&fit=crop"
+                                            class="rounded" width="40" height="40" alt="Product">
+                                    </td>
+                                    <td>سماعة رأس لاسلكية</td>
+                                    <td>1</td>
+                                    <td>30 ﷼</td>
+                                    <td>30 ﷼</td>
+                                    <td><span class="text-success">10 ﷼</span></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>2</td>
+                                    <td>
+                                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=50&h=50&fit=crop"
+                                            class="rounded" width="40" height="40" alt="Product">
+                                    </td>
+                                    <td>وصلة شاحن</td>
+                                    <td>2</td>
+                                    <td>50 ﷼</td>
+                                    <td>100 ﷼</td>
+                                    <td><span class="text-success">50 ﷼</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Total Commission -->
+                    <div class="d-flex justify-content-start mt-3">
+                        <div class="total-commission-badge">
+                            <span>اجمالي العمولة :</span>
+                            <span class="commission-value">60 ﷼</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

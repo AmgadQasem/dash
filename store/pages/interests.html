@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Million Marketer - Interests</title>
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light-custom py-3 sticky-top ">
+        <div class="container">
+            <!-- Logo (Right in RTL) -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
+                <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="text-start lh-1">
+                    <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
+                    <div class="fw-bold text-dark text-end logo-text-lg">المليون مسوق</div>
+                </div>
+            </a>
+
+
+            <!-- Action Buttons (Left in RTL) -->
+            <div class="d-flex align-items-center gap-3">
+                <div class="lang-switch text-muted d-flex align-items-center gap-1 cursor-pointer">
+                    <i class="fa-solid fa-globe"></i> <span>EN</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex flex-column bg-light-custom" style="min-height: calc(100vh - 76px);">
+
+        <div class="row flex-grow-1 justify-content-center">
+            <div class="col-lg-8 col-xl-6 bg-white pt-4">
+                <!-- Wrapper for spacing similarity -->
+                <div class="px-2">
+
+                    <!-- Wizard Stepper -->
+                    <div class="wizard-stepper mb-5 bg-white p-3 rounded-4 shadow-sm">
+                        <div class="step-line"></div>
+
+                        <!-- Step 1 (Done) -->
+                        <div class="step-item active">
+                            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                            <span class="step-label ms-2">بيانات أساسية</span>
+                        </div>
+
+                        <!-- Step 2 (Done) -->
+                        <div class="step-item active">
+                            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                            <span class="step-label ms-2">منصات التسويق</span>
+                        </div>
+
+                        <!-- Step 3 (Active) -->
+                        <div class="step-item active">
+                            <div class="step-circle">3</div>
+                            <span class="step-label ms-2">المجالات المهتم فيها</span>
+                        </div>
+                    </div>
+
+                    <h5 class="text-center mb-4 fw-bold text-dark">اختر أنواع المنتجات التي تحب تروّج لها</h5>
+
+                    <!-- Interests Grid -->
+                    <div class="interests-container bg-white p-4 rounded-4 shadow-sm text-center mb-5">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <!-- Example Items based on image -->
+                            <span class="interest-chip active">الكترونيات <i
+                                    class="fa-solid fa-xmark ms-2 small text-muted"></i></span>
+                            <span class="interest-chip">مستلزمات المنزل</span>
+                            <span class="interest-chip">مستحضرات التجميل</span>
+                            <span class="interest-chip">أزياء</span>
+                            <span class="interest-chip">حيوانات</span>
+                            <span class="interest-chip">صحة ولياقة</span>
+                            <span class="interest-chip">خدمات</span>
+                            <span class="interest-chip">الكتب والتعليم</span>
+                            <span class="interest-chip">الفنون والموسيقى</span>
+                            <span class="interest-chip">سيارات</span>
+                            <span class="interest-chip">الاكسسوارات والهدايا</span>
+                            <span class="interest-chip">المطاعم والمقاهي</span>
+                            <span class="interest-chip">اغذية وتموينات</span>
+                            <span class="interest-chip">العاب</span>
+                            <span class="interest-chip">عيادة طبية</span>
+                            <span class="interest-chip">جمعية خيرية</span>
+                            <span class="interest-chip">منتجات رقمية</span>
+                            <span class="interest-chip">أخرى</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="d-flex justify-content-between align-items-center mt-5 mb-5">
+                        <a href="marketing_platforms.html"
+                            class="btn btn-outline-secondary px-5 py-2 rounded-3">السابق</a>
+                        <!-- Finish / Dashboard Link -->
+                        <a href="../index.html" class="btn btn-main px-5 py-2 rounded-3 text-white fw-bold">انهاء</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

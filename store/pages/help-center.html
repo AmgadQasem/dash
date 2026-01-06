@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز المساعدة - منصة المليون مسوق</title>
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
+                <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="lh-1">
+                    <div class="fw-bold text-dark brand-primary">المليــون مســوق</div>
+                    <div class="fw-bold text-dark brand-secondary">Million Marketer</div>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="home.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="terms-of-use.html">سياسة الاستخدام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="privacy-policy.html">سياسة الخصوصية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="support.html">الدعم الفني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-olive fw-bold active" href="help-center.html">مركز المساعدة</a>
+                    </li>
+                </ul>
+
+                <!-- Language & Auth -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-dark text-decoration-none">EN</a>
+                    <a href="../index.html" class="btn btn-outline-dark rounded-3 px-4">تسجيل الدخول</a>
+                    <a href="signup.html" class="btn btn-main text-white rounded-3 px-4">تسجيل حساب <i
+                            class="fa-solid fa-arrow-left ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <section class="help-hero py-5">
+        <div class="container py-4">
+            <div class="text-center">
+                <h1 class="fw-bold text-dark mb-3">مرحباً بك في مركز المساعدة</h1>
+                <p class="text-muted mb-4">ابحث عن إجابة سريعة لأسئلتك أو استعرض المقالات حسب التصنيف.</p>
+
+                <!-- Search Box -->
+                <div class="help-search-box position-relative mx-auto">
+                    <input type="text" class="form-control form-control-lg" placeholder="ابحث عن ما تريد">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- User Type Tabs -->
+            <div class="text-center mb-5">
+                <div class="user-type-tabs">
+                    <button class="tab-btn active" data-target="marketer">
+                        <i class="fa-solid fa-bullhorn"></i> المسوق
+                    </button>
+                    <button class="tab-btn" data-target="merchant">
+                        <i class="fa-solid fa-store"></i> التاجر
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="help-sidebar">
+                        <div class="accordion" id="helpAccordion">
+
+                            <!-- البداية -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cat1">
+                                        <i class="fa-solid fa-play"></i> البداية
+                                    </button>
+                                </h2>
+                                <div id="cat1" class="accordion-collapse collapse show" data-bs-parent="#helpAccordion">
+                                    <div class="accordion-body">
+                                        <a href="#" class="sub-item active">كيف أنشئ حساب جديد كمسوق؟</a>
+                                        <a href="#" class="sub-item">جولة في لوحة المسوق</a>
+                                        <a href="#" class="sub-item">كيف اختار منتجات أروج لها؟</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- الروابط والكوبونات -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cat2">
+                                        <i class="fa-solid fa-link"></i> الروابط والكوبونات
+                                    </button>
+                                </h2>
+                                <div id="cat2" class="accordion-collapse collapse" data-bs-parent="#helpAccordion">
+                                    <div class="accordion-body">
+                                        <a href="#" class="sub-item">كيف أحصل على رابط تتبع؟</a>
+                                        <a href="#" class="sub-item">إنشاء كوبون خصم</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- لوحة المسوق -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cat3">
+                                        <i class="fa-solid fa-gauge-high"></i> لوحة المسوق
+                                    </button>
+                                </h2>
+                                <div id="cat3" class="accordion-collapse collapse" data-bs-parent="#helpAccordion">
+                                    <div class="accordion-body">
+                                        <a href="#" class="sub-item">شرح لوحة التحكم</a>
+                                        <a href="#" class="sub-item">تقارير الأداء</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- الأرباح والمدفوعات -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cat4">
+                                        <i class="fa-solid fa-money-bill-wave"></i> الأرباح والمدفوعات
+                                    </button>
+                                </h2>
+                                <div id="cat4" class="accordion-collapse collapse" data-bs-parent="#helpAccordion">
+                                    <div class="accordion-body">
+                                        <a href="#" class="sub-item">كيف أسحب أرباحي؟</a>
+                                        <a href="#" class="sub-item">طرق الدفع المتاحة</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- صفحة العروض الخاصة بالمسوق -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cat5">
+                                        <i class="fa-solid fa-tag"></i> صفحة العروض الخاصة بالمسوق
+                                    </button>
+                                </h2>
+                                <div id="cat5" class="accordion-collapse collapse" data-bs-parent="#helpAccordion">
+                                    <div class="accordion-body">
+                                        <a href="#" class="sub-item">تخصيص صفحة العروض</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- الدعم والمشاكل الشائعة -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#cat6">
+                                        <i class="fa-solid fa-headset"></i> الدعم والمشاكل الشائعة
+                                    </button>
+                                </h2>
+                                <div id="cat6" class="accordion-collapse collapse" data-bs-parent="#helpAccordion">
+                                    <div class="accordion-body">
+                                        <a href="#" class="sub-item">المشاكل الشائعة</a>
+                                        <a href="#" class="sub-item">التواصل مع الدعم</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Content -->
+                <div class="col-lg-8">
+                    <div class="help-article p-4 p-md-5">
+                        <!-- Article Header -->
+                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+                            <div class="mt-3">
+
+                                <h2 class="fw-bold text-dark mb-0">كيف أنشئ حساب جديد كمسوق</h2>
+                            </div>
+                            <span class="article-date">تاريخ آخر تحديث: الأحد 8 يونيو 2025</span>
+                        </div>
+
+                        <!-- Article Body -->
+                        <p class="text-muted mb-4">يمكنك إنشاء حسابك بسهولة باتباع الخطوات التالية:</p>
+
+                        <h5 class="fw-bold mb-3">1. الدخول لصفحة التسجيل</h5>
+                        <ul class="step-list list-unstyled mb-4">
+                            <li>انتقل إلى صفحة التسجيل في المنصة واضغط على خيار إنشاء حساب جديدز</li>
+                        </ul>
+
+                        <h5 class="fw-bold mb-3">2. اختيار نوع الحساب</h5>
+                        <ul class="step-list list-unstyled mb-4">
+                            <li>حدد أنك ترغب بالتسجيل كـ مسوق.</li>
+                        </ul>
+
+                        <h5 class="fw-bold mb-3">3. إدخال البيانات الأساسية</h5>
+                        <ul class="step-list list-unstyled mb-4">
+                            <li>أدخل بريدك الإلكتروني ورقم هاتفك.</li>
+                            <li>أنشئ كلمة مرور قوية وآمنة.</li>
+                            <li>يمكنك أيضًا التسجيل باستخدام حسابك على Google أو Apple لتسهيل العملية.</li>
+                        </ul>
+
+                        <h5 class="fw-bold mb-3">4. إكمال ملفك الشخصي</h5>
+                        <ul class="step-list list-unstyled mb-4">
+                            <li>أضف اسمك وصورتك الشخصية ليظهر في صفحة العروض الخاصة بك.</li>
+                            <li>تأكد من تعبئة كل الحقول المطلوبة لتسهيل قبولك في برامج التاجر.</li>
+                        </ul>
+
+                        <h5 class="fw-bold mb-3">5. تفعيل الحساب</h5>
+                        <ul class="step-list list-unstyled mb-4">
+                            <li>سيتم إرسال رسالة تأكيد إلى بريدك الإلكتروني.</li>
+                            <li>بعد تأكيد البريد، يمكنك الدخول مباشرة إلى لوحة المسوق الخاصة بك.</li>
+                        </ul>
+
+                        <!-- Note Box -->
+                        <div class="note-box mt-4">
+                            <p class="mb-0"><strong>ملاحظة:</strong> التسجيل مجاني، ولا توجد أي رسوم لبدء استخدام حساب
+                                المسوق.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Banner -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="contact-banner p-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 mb-4 mb-lg-0">
+                                <h3 class="fw-bold text-dark mb-3">تواصل معنا</h3>
+                                <p class="text-muted mb-0">لأي استفسار أو ملاحظة يمكنكم التواصل عبر فريق الدعم الفني</p>
+                            </div>
+                            <div class="col-lg-4 text-lg-start">
+                                <a href="support.html" class="btn btn-main text-white px-5 py-3 rounded-3 fw-bold">
+                                    <i class="fa-solid fa-headset me-2"></i> الدعم الفني
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5 bg-olive">
+        <div class="container py-4">
+            <div class="row g-4 align-items-start">
+
+                <!-- Company Info & Social Media -->
+                <div class="col-lg-4 order-1">
+                    <div class="footer-brand text-white mb-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <div class="logo-icon display-6"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="lh-1">
+                                <div class="fw-bold logo-text-xl">المليــون مســوق</div>
+                                <div class="fw-bold logo-text-xl">Million Marketer</div>
+                            </div>
+                        </div>
+                        <p class="small opacity-75 mb-4">هي مبادرة رائدة أطلقتها شركة الكود الأول في السعودية، بهدف
+                            تمكين الأفراد وزيادة دخلهم على خلال التسويق الإلكتروني.</p>
+
+                        <!-- Social Media Icons -->
+                        <div class="social-links d-flex gap-3">
+                            <a href="#"
+                                class="social-link bg-white rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-facebook-f text-olive"></i>
+                            </a>
+                            <a href="#"
+                                class="social-link bg-white rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-instagram text-olive"></i>
+                            </a>
+                            <a href="#"
+                                class="social-link bg-white rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-twitter text-olive"></i>
+                            </a>
+                            <a href="#"
+                                class="social-link bg-white rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fa-brands fa-youtube text-olive"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="col-lg-5 order-3 order-lg-2">
+                    <div class="d-flex px-3">
+                        <div class="col">
+                            <h6 class="text-white fw-bold mb-3">الرئيسية</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="terms-of-use.html"
+                                        class="text-white text-decoration-none small">سياسة الاستخدام</a></li>
+                                <li class="mb-2"><a href="privacy-policy.html"
+                                        class="text-white text-decoration-none small">الخصوصية</a></li>
+                                <li class="mb-2"><a href="support.html"
+                                        class="text-white text-decoration-none small">الدعم
+                                        الفني</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled mt-4">
+                                <li class="mb-2"><a href="../index.html"
+                                        class="text-white text-decoration-none small">تسجيل الدخول</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner Info -->
+                <div class="col-lg-3 order-2 order-lg-3">
+                    <h6 class="text-white fw-bold mb-3">الشريك والمنفذ الرئيسي :</h6>
+                    <div class="mb-3">
+                        <h6 class="text-white mb-3">شركة الكود الأول</h6>
+                        <div class="partner-logo rounded-3 d-inline-block mb-3">
+                            <img src="../assets/icons/effegegg 1.png" alt="First Code"
+                                class="img-fluid partner-logo-md">
+                        </div>
+                    </div>
+                    <div class="text-white small">
+                        <img src="../assets/icons/Group (6).png" alt="" class="img-fluid partner-logo-md">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-5 pt-4 border-top border-white border-opacity-25">
+                <div class="col-12 text-center">
+                    <p class="text-white small mb-0 opacity-75">جميع الحقوق محفوظة © 2025 منصة مليون مسوق</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // User Type Tabs Toggle
+        const tabBtns = document.querySelectorAll('.user-type-tabs .tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Sidebar sub-items active state
+        const subItems = document.querySelectorAll('.help-sidebar .sub-item');
+        subItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                subItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

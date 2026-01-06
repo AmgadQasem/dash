@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعدادات صفحة الهبوط - Million Marketer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-flex flex-column" id="sidebar">
+            <div class="sidebar-header p-4 d-flex align-items-center gap-3">
+                <div class="logo-icon">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <div class="logo-text text-white">
+                    <div class="fw-bold">المــــليون مــــسوق</div>
+                    <small>Million Marketer</small>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav flex-grow-1 px-2 pt-3">
+                <ul class="nav flex-column gap-1">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-box-seam"></i>
+                            <span>المنتجات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="myproducts.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                            <span>منتجاتي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="finance.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-wallet2"></i>
+                            <span>المالية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="report.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span>التقارير</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="notifications.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-bell"></i>
+                            <span>الإشعارات</span>
+                        </a>
+                    </li>
+                    <!-- Settings Menu (Expanded) -->
+                    <li class="nav-item">
+                        <a href="#settingsSubmenu" class="nav-link active rounded-3 d-flex align-items-center gap-2"
+                            data-bs-toggle="collapse">
+                            <i class="bi bi-gear"></i>
+                            <span>الإعدادات</span>
+                            <i class="bi bi-chevron-down ms-auto small"></i>
+                        </a>
+                        <div class="collapse show settings-submenu mt-1" id="settingsSubmenu">
+                            <ul class="nav flex-column gap-1">
+                                <li class="nav-item">
+                                    <a href="settings_profile.html"
+                                        class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-person small"></i>
+                                        <span>الملف الشخصي</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="settings_landing.html"
+                                        class="nav-link active rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-layout-text-window-reverse small"></i>
+                                        <span>إعدادات صفحة الهبوط</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="settings_finance.html"
+                                        class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-credit-card small"></i>
+                                        <span>إعدادات المالية</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer Links -->
+            <div class="sidebar-footer p-3 border-top">
+                <a href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none py-2 px-3 rounded-3 footer-link">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>صفحة العقود</span>
+                </a>
+                <a href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none py-2 px-3 rounded-3 footer-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>تسجيل خروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content flex-grow-1 bg-light">
+            <!-- Header -->
+            <header
+                class="bg-white py-3 px-4 border-bottom d-flex align-items-center justify-content-between sticky-top">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="sidebar-toggle" id="sidebarToggle" type="button">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <!-- Search Bar -->
+                    <div class="position-relative d-none d-md-block" style="width: 400px;">
+                        <input type="text" class="form-control bg-light border-0 ps-5 rounded-3 py-2"
+                            placeholder="البحث">
+                        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown">
+                        <button class="notification-btn btn rounded-3 position-relative" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <i class="bi bi-bell fs-5 text-secondary"></i>
+                            <span
+                                class="position-absolute top-0 start-0 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-start notifications-dropdown p-0 shadow-lg">
+                            <div
+                                class="notifications-header d-flex justify-content-between align-items-center p-3 border-bottom">
+                                <button class="btn btn-sm btn-light text-muted">وضع الكل كمقروء</button>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-bold">الاشـعـارات</span>
+                                    <i class="bi bi-bell text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="notifications-list">
+                                <a href="#"
+                                    class="notification-item unread d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <span class="unread-dot"></span>
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon"><i class="bi bi-box-seam"></i></div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                            </div>
+                            <div class="notifications-footer text-center p-3 border-top">
+                                <a href="notifications.html" class="text-decoration-none text-muted small">عرض الكل</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="settings_profile.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                        <img src="https://ui-avatars.com/api/?name=Abu+Ghazi&background=random" alt="User"
+                            class="rounded-circle user-avatar" width="45" height="45">
+                        <div class="d-none d-sm-block">
+                            <div class="fw-bold small text-dark">أبو غازي العتيبي</div>
+                            <div class="text-muted small" style="font-size: 11px;">aboghazi@gmail.com</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area p-4">
+                <!-- Page Title -->
+                <h4 class="fw-bold text-center mb-4">اعدادات صفحة الهبوط</h4>
+
+                <!-- Stepper -->
+                <div class="landing-stepper mb-5">
+                    <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap flex-row-reverse">
+                        <!-- Step 5 -->
+                        <div class="step-item" data-step="5">
+                            <span class="step-number">5</span>
+                            <span class="step-label">محرر الصفحة</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <!-- Step 4 -->
+                        <div class="step-item" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-label">أقسام الصفحة</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <!-- Step 3 -->
+                        <div class="step-item" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">المنتجات</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <!-- Step 2 -->
+                        <div class="step-item" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">معلومات الصفحة</span>
+                        </div>
+                        <div class="step-line active"></div>
+                        <!-- Step 1 (Active) -->
+                        <div class="step-item active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">حجز دومين</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step Content -->
+                <div class="step-content">
+                    <!-- Step 1: Domain Reservation -->
+                    <div class="step-pane active" id="step1">
+                        <div class="text-center mb-4">
+                            <h5 class="fw-bold text-olive">اختر اسم صفحتك</h5>
+                            <p class="text-muted">يمكنك اختيار الاسم المناسب لصفحتك حسب اهتماماتك</p>
+                        </div>
+
+                        <div class="domain-input-container mx-auto" style="max-width: 600px;">
+                            <div class="input-group domain-input-group" style="direction: ltr;">
+                                <span
+                                    class="input-group-text domain-prefix bg-olive text-white border-0 rounded-start-2 px-3">https://millionmarketer/</span>
+                                <input type="text" class="form-control bg-light border-0 rounded-end-2"
+                                    placeholder="ادخل اسم الصفحة" style="text-align: right;">
+                            </div>
+                            <div class="domain-warning mt-3 text-center d-flex align-items-center justify-content-center gap-2"
+                                style="direction: rtl;">
+                                <span class="text-muted small">يجب أن يحتوي الرابط على حروف إنجليزية وأرقام فقط، بدون
+                                    مسافات ولا يمكن تغييره لاحقاً.</span>
+                                <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Page Information -->
+                    <div class="step-pane" id="step2">
+                        <div class="mb-2">
+                            <label class="form-label fw-bold small text-dark">صورة رأس الصفحة (الهيدر) والصورة الشخصية
+                                او اللوجو</label>
+                        </div>
+
+                        <!-- Images Container -->
+                        <div class="position-relative mb-2">
+                            <!-- Header Image Area -->
+                            <div class="header-upload-area bg-light rounded-4 d-flex align-items-center justify-content-center position-relative"
+                                style="height: 200px; border: 2px dashed #e0e0e0; cursor: pointer;">
+                                <!-- AI Badge -->
+                                <span
+                                    class="position-absolute top-0 end-0 m-3 badge bg-olive text-white rounded-3 px-3 py-2"
+                                    style="font-size: 12px; font-weight: normal;">
+                                    <i class="bi bi-stars me-1"></i> AI
+                                </span>
+
+                                <div class="text-center text-muted">
+                                    <div class="rounded-circle bg-olive text-white d-inline-flex align-items-center justify-content-center mb-2"
+                                        style="width: 40px; height: 40px;">
+                                        <i class="bi bi-cloud-arrow-up fs-5"></i>
+                                    </div>
+                                    <div class="small">ارفع الصورة</div>
+                                </div>
+                            </div>
+
+                            <!-- Logo Image Area (Overlapping) -->
+                            <div class="logo-upload-area position-absolute bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center p-1"
+                                style="width: 110px; height: 110px; bottom: -30px; left: 40px; z-index: 2;">
+
+                                <div class="position-relative w-100 h-100 d-flex align-items-center justify-content-center bg-light rounded-circle"
+                                    style="border: 1px dashed #e0e0e0; cursor: pointer;">
+                                    <i class="bi bi-image text-muted fs-4"></i>
+
+                                    <!-- AI Badge Small (on logo) -->
+                                    <span
+                                        class="position-absolute top-0 end-0 badge bg-olive text-white rounded-3 d-flex align-items-center justify-content-center"
+                                        style="width: 24px; height: 24px; left: auto; right: 0; top: 0; transform: translate(20%, -20%);">
+                                        <i class="bi bi-stars" style="font-size: 12px;"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dimensions Info -->
+                        <div class="text-muted small mb-4 pt-4 text-end" style="font-size: 11px; direction: ltr;">
+                            <div>*ابعاد البنر الموصى بها 400*1100</div>
+                            <div>*ابعاد اللوجو الموصى بها 110*110</div>
+                        </div>
+
+                        <div class="row g-4">
+                            <!-- Name Input -->
+                            <div class="col-12">
+                                <label class="form-label fw-bold small text-dark d-block">الاسم</label>
+                                <div class="position-relative">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="ادخل اسمك"
+                                        style="padding-left: 35px;">
+                                    <i class="bi bi-person position-absolute text-muted"
+                                        style="left: 10px; top: 50%; transform: translateY(-50%);"></i>
+                                </div>
+                            </div>
+
+                            <!-- Bio Input -->
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <label class="form-label fw-bold small text-dark mb-0">نبذة تعريفية عنك</label>
+
+                                </div>
+                                <div class="position-relative">
+                                    <!-- AI Badge for Bio -->
+                                    <span
+                                        class="position-absolute top-0 end-0 m-2 badge bg-olive text-white rounded-3 px-3 py-1"
+                                        style="font-size: 10px; z-index: 2;">
+                                        <i class="bi bi-stars me-1"></i> AI
+                                    </span>
+                                    <textarea class="form-control bg-light border-0" rows="5"
+                                        placeholder="اكتب نبذة تعريفية عن نفسك" style="padding-top: 40px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Products -->
+                    <div class="step-pane" id="step3">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="dropdown">
+                                    <button class="btn btn-light btn-sm rounded-3 dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown">
+                                        <i class="bi bi-sort-down me-1"></i> الترتيب حسب
+                                    </button>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-light btn-sm rounded-3 dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown">
+                                        التصنيفات
+                                    </button>
+                                </div>
+                                <button class="btn btn-light btn-sm rounded-3">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </button>
+                            </div>
+                            <h6 class="fw-bold mb-0">اختر المنتجات التي تريد أن يراها عملاؤك في صفحتك</h6>
+                        </div>
+
+                        <!-- Products Grid -->
+                        <div class="row g-3">
+                            <!-- Card 1: Add, Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-tag-fill text-danger me-1"></i> خصم 20%
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="d-flex align-items-center justify-content-center gap-1 small fw-bold"
+                                            style="font-size: 11px;">
+                                            <span class="text-danger">رمز كوبونك :</span>
+                                            <span class="text-dark">Ghahazi25_SUMMER20</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-olive w-100 rounded-3 py-2 fw-bold"
+                                        style="background-color: #a7b055; color: white;">اضافة للصفحة</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Remove, Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-tag-fill text-danger me-1"></i> خصم 20%
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="d-flex align-items-center justify-content-center gap-1 small fw-bold"
+                                            style="font-size: 11px;">
+                                            <span class="text-danger">رمز كوبونك :</span>
+                                            <span class="text-dark">Ghahazi25_SUMMER20</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn w-100 rounded-3 py-2 fw-bold text-olive"
+                                        style="background-color: #f4f5e6;">إزالة</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Add, No Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="text-muted small fw-bold" style="font-size: 11px;">
+                                            لا يوجد كوبون
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-olive w-100 rounded-3 py-2 fw-bold"
+                                        style="background-color: #a7b055; color: white;">اضافة للصفحة</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Remove, No Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="text-muted small fw-bold" style="font-size: 11px;">
+                                            لا يوجد كوبون
+                                        </div>
+                                    </div>
+                                    <button class="btn w-100 rounded-3 py-2 fw-bold text-olive"
+                                        style="background-color: #f4f5e6;">إزالة</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="row g-3 mt-1">
+                            <!-- Card 5: Add, Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-tag-fill text-danger me-1"></i> خصم 20%
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="d-flex align-items-center justify-content-center gap-1 small fw-bold"
+                                            style="font-size: 11px;">
+                                            <span class="text-danger">رمز كوبونك :</span>
+                                            <span class="text-dark">Ghahazi25_SUMMER20</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-olive w-100 rounded-3 py-2 fw-bold"
+                                        style="background-color: #a7b055; color: white;">اضافة للصفحة</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 6: Add, No Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="text-muted small fw-bold" style="font-size: 11px;">
+                                            لا يوجد كوبون
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-olive w-100 rounded-3 py-2 fw-bold"
+                                        style="background-color: #a7b055; color: white;">اضافة للصفحة</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 7: Remove, Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-tag-fill text-danger me-1"></i> خصم 20%
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="d-flex align-items-center justify-content-center gap-1 small fw-bold"
+                                            style="font-size: 11px;">
+                                            <span class="text-danger">رمز كوبونك :</span>
+                                            <span class="text-dark">Ghahazi25_SUMMER20</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn w-100 rounded-3 py-2 fw-bold text-olive"
+                                        style="background-color: #f4f5e6;">إزالة</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 8: Add, No Coupon -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="landing-product-card bg-white rounded-4 border p-3 h-100">
+                                    <div class="product-image-container position-relative rounded-4 mb-3 d-flex align-items-center justify-content-center p-3"
+                                        style="background-color: #f8f9fa; height: 200px;">
+                                        <span
+                                            class="badge bg-white text-dark position-absolute top-0 m-3 rounded-pill px-2 py-1 shadow-sm border"
+                                            style="font-size: 14px; left: 0; z-index: 2;">
+                                            30 <span class="text-olive">ر.س</span>
+                                        </span>
+                                        <div class="product-badges d-flex flex-column align-items-end gap-2 position-absolute top-0 m-3"
+                                            style="right: 0; z-index: 2;">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-2 py-1 shadow-sm border"
+                                                style="font-size: 10px;">
+                                                <i class="bi bi-cash-coin text-success me-1"></i> عمولة : 10 %
+                                            </span>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
+                                            class="img-fluid" style="mix-blend-mode: multiply; max-height: 100%;">
+                                    </div>
+                                    <h6 class="fw-bold text-center mb-1">سماعة رأس لاسلكية</h6>
+                                    <p class="text-muted text-center small mb-3">سماعة رأس لاسلكية بتصميم مريح...</p>
+                                    <div class="text-center mb-3">
+                                        <div class="text-danger small mb-1">متجر التقنيات الحديثة</div>
+                                        <div class="text-muted small fw-bold" style="font-size: 11px;">
+                                            لا يوجد كوبون
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-olive w-100 rounded-3 py-2 fw-bold"
+                                        style="background-color: #a7b055; color: white;">اضافة للصفحة</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Page Sections -->
+                    <div class="step-pane" id="step4">
+                        <div class="row justify-content-center g-3">
+                            <!-- Contact Form Card (Selected) -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="section-card selected">
+                                    <div class="section-settings" style="cursor: pointer;" data-bs-toggle="modal"
+                                        data-bs-target="#contactFormModal">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <div class="section-icon">
+                                        <i class="bi bi-chat-square-text"></i>
+                                    </div>
+                                    <h6 class="fw-bold mt-3">نموذج تواصل</h6>
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Social Networks Card -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="section-card">
+                                    <div class="section-settings" style="cursor: pointer;" data-bs-toggle="modal"
+                                        data-bs-target="#socialNetworksModal">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <div class="section-icon">
+                                        <i class="bi bi-share"></i>
+                                    </div>
+                                    <h6 class="fw-bold mt-3">شبكات التواصل</h6>
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slider Card -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="section-card">
+                                    <div class="section-settings" style="cursor: pointer;" data-bs-toggle="modal"
+                                        data-bs-target="#sliderModal">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <div class="section-icon">
+                                        <i class="bi bi-collection"></i>
+                                    </div>
+                                    <h6 class="fw-bold mt-3">سلايدر</h6>
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Banner Card -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="section-card">
+                                    <div class="section-settings" style="cursor: pointer;" data-bs-toggle="modal"
+                                        data-bs-target="#bannerModal">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <div class="section-icon">
+                                        <i class="bi bi-card-image"></i>
+                                    </div>
+                                    <h6 class="fw-bold mt-3">بانر</h6>
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Page Editor -->
+                    <div class="step-pane" id="step5">
+                        <div class="row g-4 flex-row-reverse">
+                            <div class="col-lg-7">
+                                <div class="page-editor-preview bg-white rounded-4 shadow-sm overflow-hidden">
+                                    <!-- Preview Header with Controls -->
+                                    <div
+                                        class="preview-header d-flex justify-content-between align-items-center p-3 border-bottom">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <button class="btn btn-outline-secondary btn-sm">
+                                                <i class="bi bi-arrow-left"></i>
+                                            </button>
+                                            <span class="text-muted small">عرض الصفحة</span>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-sm btn-olive">
+                                                <i class="bi bi-phone me-1"></i>
+                                                موبايل
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-tablet me-1"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-display me-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Preview Content (Mobile Frame) -->
+                                    <div class="preview-content p-4 bg-light"
+                                        style="max-height: 700px; overflow-y: auto;">
+                                        <div class="mobile-frame mx-auto bg-white rounded-4 shadow overflow-hidden"
+                                            style="max-width: 375px;">
+
+                                            <!-- Profile Header -->
+                                            <div class="preview-profile-header position-relative"
+                                                style="background: linear-gradient(135deg, #e8ecc8 0%, #d4daa6 100%); height: 100px; padding: 10px;">
+                                                <div class="d-flex justify-content-between align-items-start">
+                                                    <div class="d-flex gap-1">
+                                                        <span class="badge rounded-circle bg-white text-dark p-1"
+                                                            style="width: 24px; height: 24px;">
+                                                            <i class="bi bi-pencil" style="font-size: 10px;"></i>
+                                                        </span>
+                                                        <span class="badge rounded-circle bg-white text-dark p-1"
+                                                            style="width: 24px; height: 24px;">
+                                                            <i class="bi bi-share" style="font-size: 10px;"></i>
+                                                        </span>
+                                                        <span class="badge rounded-circle bg-white text-dark p-1"
+                                                            style="width: 24px; height: 24px;">
+                                                            <i class="bi bi-files" style="font-size: 10px;"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        style="width: 30px; height: 30px; border: 2px dashed #999; border-radius: 50%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Profile Info -->
+                                            <div class="preview-profile-info text-center px-3 pb-3"
+                                                style="margin-top: -35px;">
+                                                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                    class="rounded-circle border border-3 border-white shadow-sm"
+                                                    width="70" height="70">
+                                                <h6 class="fw-bold mt-2 mb-1" style="font-size: 14px;">غازي العتيبي</h6>
+                                                <div class="d-flex justify-content-center gap-2 mb-2">
+                                                    <i class="bi bi-twitter-x" style="font-size: 12px;"></i>
+                                                    <i class="bi bi-facebook" style="font-size: 12px;"></i>
+                                                    <i class="bi bi-tiktok" style="font-size: 12px;"></i>
+                                                    <i class="bi bi-instagram" style="font-size: 12px;"></i>
+                                                </div>
+                                                <p class="text-muted mb-0" style="font-size: 9px; line-height: 1.4;">
+                                                    مسوق رقمي شغوف بمساعدة العلامات التجارية على النمو من خلال
+                                                    استراتيجيات تسويق مبتكرة
+                                                    <br>أشارك محتوى وإعلانات تصل لجمهورك المثالي.
+                                                </p>
+                                            </div>
+
+                                            <!-- Products Section Header -->
+                                            <div class="px-3 py-2 border-top">
+                                                <h6 class="fw-bold text-center mb-2" style="font-size: 12px;">منتجاتي
+                                                </h6>
+                                                <p class="text-muted text-center mb-2" style="font-size: 8px;">
+                                                    تصفح قائمة المنتجات المعروضة واختر ما يناسبك، ستلاحظ أن بعض المنتجات
+                                                    تحتوي على كود خصم خاص
+                                                </p>
+                                                <!-- Category Tabs -->
+                                                <div class="d-flex justify-content-center gap-1 mb-2 flex-wrap">
+                                                    <button class="btn btn-olive btn-sm"
+                                                        style="font-size: 7px; padding: 2px 8px; border-radius: 12px;">الكل</button>
+                                                    <button class="btn btn-light btn-sm"
+                                                        style="font-size: 7px; padding: 2px 8px; border-radius: 12px;">أزياء</button>
+                                                    <button class="btn btn-light btn-sm"
+                                                        style="font-size: 7px; padding: 2px 8px; border-radius: 12px;">الكترونيات</button>
+                                                    <button class="btn btn-light btn-sm"
+                                                        style="font-size: 7px; padding: 2px 8px; border-radius: 12px;">تجميل</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Products Grid -->
+                                            <div class="px-3 py-2">
+                                                <div class="row g-2">
+                                                    <div class="col-6">
+                                                        <div class="border rounded-3 p-2 text-center bg-light">
+                                                            <div class="d-flex justify-content-between mb-1">
+                                                                <span class="badge bg-danger"
+                                                                    style="font-size: 6px;">خصم 20%</span>
+                                                                <i class="bi bi-heart text-muted"
+                                                                    style="font-size: 10px;"></i>
+                                                            </div>
+                                                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop"
+                                                                class="rounded-2 mb-1" width="60" height="60">
+                                                            <div style="font-size: 9px;" class="fw-bold">سماعة رأس
+                                                                لاسلكية</div>
+                                                            <div style="font-size: 7px;" class="text-muted">سماعة رأس
+                                                                لاسلكية بتصميم مريح</div>
+                                                            <div style="font-size: 8px;"
+                                                                class="text-olive fw-bold mt-1">30 ر.س</div>
+                                                            <button class="btn btn-olive w-100 mt-1"
+                                                                style="font-size: 7px; padding: 3px;">اشتري
+                                                                الآن</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="border rounded-3 p-2 text-center bg-light">
+                                                            <div class="d-flex justify-content-between mb-1">
+                                                                <span class="badge bg-danger"
+                                                                    style="font-size: 6px;">خصم 20%</span>
+                                                                <i class="bi bi-heart text-muted"
+                                                                    style="font-size: 10px;"></i>
+                                                            </div>
+                                                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop"
+                                                                class="rounded-2 mb-1" width="60" height="60">
+                                                            <div style="font-size: 9px;" class="fw-bold">سماعة رأس
+                                                                لاسلكية</div>
+                                                            <div style="font-size: 7px;" class="text-muted">سماعة رأس
+                                                                لاسلكية بتصميم مريح</div>
+                                                            <div style="font-size: 8px;"
+                                                                class="text-olive fw-bold mt-1">30 ر.س</div>
+                                                            <button class="btn btn-outline-olive w-100 mt-1"
+                                                                style="font-size: 7px; padding: 3px; border-color: #a7b055; color: #a7b055;">اشتري
+                                                                الآن</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- SUPER SALE Banner -->
+                                            <div class="px-3 py-2">
+                                                <div class="rounded-3 overflow-hidden position-relative"
+                                                    style="background: linear-gradient(135deg, #e8ecc8 0%, #d4daa6 100%); height: 90px;">
+                                                    <div
+                                                        class="d-flex h-100 align-items-center justify-content-between px-3">
+                                                        <div>
+                                                            <div style="font-size: 16px; color: #666;" class="fw-bold">
+                                                                SUPER</div>
+                                                            <div style="font-size: 24px; color: #a7b055;"
+                                                                class="fw-bold">SALE</div>
+                                                            <div style="font-size: 8px; color: #666;">20% OFF</div>
+                                                        </div>
+                                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop"
+                                                            class="rounded-2" width="70" height="70">
+                                                    </div>
+                                                    <!-- Navigation Arrows -->
+                                                    <button class="btn btn-light btn-sm position-absolute"
+                                                        style="left: 5px; top: 50%; transform: translateY(-50%); padding: 2px 5px;">
+                                                        <i class="bi bi-chevron-left" style="font-size: 10px;"></i>
+                                                    </button>
+                                                    <button class="btn btn-light btn-sm position-absolute"
+                                                        style="right: 5px; top: 50%; transform: translateY(-50%); padding: 2px 5px;">
+                                                        <i class="bi bi-chevron-right" style="font-size: 10px;"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Contact Form Section -->
+                                            <div class="px-3 py-3 border-top">
+                                                <div class="text-center mb-3">
+                                                    <div class="d-inline-flex align-items-center gap-1 mb-1">
+                                                        <i class="bi bi-chat-dots text-olive"
+                                                            style="font-size: 14px;"></i>
+                                                    </div>
+                                                    <h6 class="fw-bold text-olive mb-1" style="font-size: 12px;">تواصل
+                                                        معنا</h6>
+                                                    <p class="text-muted mb-0" style="font-size: 8px;">نحن هنا للإجابة
+                                                        على جميع استفساراتك، تواصل معنا الآن</p>
+                                                </div>
+
+                                                <div class="mb-2">
+                                                    <label style="font-size: 8px;" class="text-muted">الاسم</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        placeholder="مثال: محمد" style="font-size: 8px;">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label style="font-size: 8px;" class="text-muted">رقم جوال
+                                                        التواصل</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        placeholder="+966587931245" style="font-size: 8px;">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label style="font-size: 8px;" class="text-muted">البريد
+                                                        الالكتروني</label>
+                                                    <input type="email" class="form-control form-control-sm"
+                                                        placeholder="email@email.com" style="font-size: 8px;">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label style="font-size: 8px;" class="text-muted">الرسالة</label>
+                                                    <textarea class="form-control form-control-sm" rows="2"
+                                                        placeholder="الرسالة" style="font-size: 8px;"></textarea>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label style="font-size: 8px;" class="text-muted">المرفقات</label>
+                                                    <div class="border rounded-2 p-2 text-center"
+                                                        style="border-style: dashed !important;">
+                                                        <i class="bi bi-cloud-arrow-up text-olive"
+                                                            style="font-size: 16px;"></i>
+                                                        <div style="font-size: 7px;" class="text-olive">ارفق الصور</div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-olive w-100"
+                                                    style="font-size: 10px;">ارسال</button>
+                                            </div>
+
+                                            <!-- Customer Reviews Section -->
+                                            <div class="px-3 py-3 border-top bg-light">
+                                                <div class="text-center mb-3">
+                                                    <h6 class="fw-bold text-olive mb-1" style="font-size: 12px;">آراء
+                                                        العملاء</h6>
+                                                    <p class="text-muted mb-0" style="font-size: 8px;">تعرف على تجارب
+                                                        العملاء مع المسوق وخدماته لتتأكد من جودة تجربتك قبل التعامل.</p>
+                                                </div>
+
+                                                <!-- Review Card -->
+                                                <div class="bg-white rounded-3 p-2 shadow-sm mb-2">
+                                                    <p class="text-muted mb-2"
+                                                        style="font-size: 7px; line-height: 1.5;">
+                                                        " بصراحة كانت تجربتي مع هذا المسوق ممتازة جداً. لقيت كل
+                                                        المعلومات اللي بحتاجها عن المنتج بطريقة واضحة وسهلة.
+                                                        وحتى الكوبون اللي وفره ساعدني أوفر مبلغ حلو ما حسيت بأي تعقيد
+                                                        أثناء عملية الشراء "
+                                                    </p>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="https://randomuser.me/api/portraits/men/45.jpg"
+                                                            class="rounded-circle" width="25" height="25">
+                                                        <div>
+                                                            <div style="font-size: 8px;" class="fw-bold">أحمد محمد</div>
+                                                            <div style="font-size: 6px;" class="text-muted">10 أكتوبر،
+                                                                2025</div>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="bi bi-star-fill text-warning"
+                                                                style="font-size: 8px;"></i>
+                                                            <i class="bi bi-star-fill text-warning"
+                                                                style="font-size: 8px;"></i>
+                                                            <i class="bi bi-star-fill text-warning"
+                                                                style="font-size: 8px;"></i>
+                                                            <i class="bi bi-star-fill text-warning"
+                                                                style="font-size: 8px;"></i>
+                                                            <i class="bi bi-star-fill text-warning"
+                                                                style="font-size: 8px;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button class="btn btn-olive w-100" style="font-size: 9px;">عرض
+                                                    المزيد</button>
+                                            </div>
+
+                                            <!-- Footer -->
+                                            <div class="px-3 py-3 text-center" style="background-color: #a7b055;">
+                                                <div class="mb-2">
+                                                    <i class="bi bi-shop text-white" style="font-size: 20px;"></i>
+                                                </div>
+                                                <div class="text-white mb-1" style="font-size: 10px;">المليون مسوق</div>
+                                                <div class="text-white-50 mb-2" style="font-size: 8px;">Million Marketer
+                                                </div>
+                                                <p class="text-white-50 mb-2" style="font-size: 7px;">
+                                                    هي مبادرة رائعة أطلقتها شركة شركة الكود الأول في السعودية.
+                                                    <br>بهدف تمكين الأفراد وزيادة دخلهم من خلال التسويق الإلكتروني.
+                                                </p>
+                                                <div class="text-white-50" style="font-size: 6px;">
+                                                    جميع الحقوق محفوظة 2025 © منصة مليون مسوق
+                                                </div>
+                                            </div>
+
+                                            <!-- Bottom Action Button -->
+                                            <div class="p-2 border-top bg-white">
+                                                <button class="btn btn-outline-secondary w-100"
+                                                    style="font-size: 9px;">أنشئ صفحتك</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Left Side (in RTL): Settings Panels -->
+                            <div class="col-lg-5">
+                                <!-- Sections Order Panel -->
+                                <div class="editor-panel bg-white rounded-4 shadow-sm p-4 mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-3"
+                                        data-bs-toggle="collapse" data-bs-target="#sectionsPanel">
+                                        <h6 class="fw-bold mb-0">
+                                            <i class="bi bi-list-ul me-2"></i>
+                                            ترتيب الأقسام في الصفحة
+                                        </h6>
+                                        <i class="bi bi-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse show" id="sectionsPanel">
+                                        <div class="sections-order-list">
+                                            <div
+                                                class="section-order-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                                                <span class="small">البنر</span>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox" checked>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="section-order-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                                                <span class="small">المنتجات</span>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox" checked>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="section-order-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                                                <span class="small">نموذج تواصل</span>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox" checked>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="section-order-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                                                <span class="small">سلايدر توضيحي</span>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox">
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="section-order-item d-flex justify-content-between align-items-center p-2">
+                                                <span class="small">آراء العملاء</span>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox" checked>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Page Colors Panel -->
+                                <div class="editor-panel bg-white rounded-4 shadow-sm p-4 mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-3"
+                                        data-bs-toggle="collapse" data-bs-target="#colorsPanel">
+                                        <h6 class="fw-bold mb-0">
+                                            <i class="bi bi-palette me-2"></i>
+                                            ألوان الصفحة
+                                        </h6>
+                                        <i class="bi bi-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse show" id="colorsPanel">
+                                        <div class="color-options">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="small">اللون الأساسي</span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="color" class="form-control form-control-color"
+                                                        value="#a7b055" style="width: 32px; height: 32px;">
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="small">اللون الثانوي</span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="color" class="form-control form-control-color"
+                                                        value="#8a9448" style="width: 32px; height: 32px;">
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="small">لون الخلفية</span>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <input type="color" class="form-control form-control-color"
+                                                        value="#ffffff" style="width: 32px; height: 32px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Fonts Panel -->
+                                <div class="editor-panel bg-white rounded-4 shadow-sm p-4 mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-3"
+                                        data-bs-toggle="collapse" data-bs-target="#fontsPanel">
+                                        <h6 class="fw-bold mb-0">
+                                            <i class="bi bi-fonts me-2"></i>
+                                            الخطوط
+                                        </h6>
+                                        <i class="bi bi-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse show" id="fontsPanel">
+                                        <div class="font-options">
+                                            <div class="mb-3">
+                                                <label class="form-label small">حجم الخط الأساسي</label>
+                                                <select class="form-select form-select-sm">
+                                                    <option value="14">14px</option>
+                                                    <option value="16" selected>16px</option>
+                                                    <option value="18">18px</option>
+                                                    <option value="20">20px</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label small">حجم خط العناوين</label>
+                                                <select class="form-select form-select-sm">
+                                                    <option value="20">20px</option>
+                                                    <option value="24" selected>24px</option>
+                                                    <option value="28">28px</option>
+                                                    <option value="32">32px</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label class="form-label small">نوع الخط</label>
+                                                <select class="form-select form-select-sm">
+                                                    <option value="tajawal" selected>Tajawal</option>
+                                                    <option value="cairo">Cairo</option>
+                                                    <option value="almarai">Almarai</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Spacing Panel -->
+                                <div class="editor-panel bg-white rounded-4 shadow-sm p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3"
+                                        data-bs-toggle="collapse" data-bs-target="#spacingPanel">
+                                        <h6 class="fw-bold mb-0">
+                                            <i class="bi bi-distribute-vertical me-2"></i>
+                                            المسافات
+                                        </h6>
+                                        <i class="bi bi-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse show" id="spacingPanel">
+                                        <div class="spacing-options">
+                                            <div class="mb-3">
+                                                <label class="form-label small d-flex justify-content-between">
+                                                    <span>مسافة بين الأقسام</span>
+                                                    <span class="text-olive">30px</span>
+                                                </label>
+                                                <input type="range" class="form-range" min="10" max="60" value="30">
+                                            </div>
+                                            <div>
+                                                <label class="form-label small d-flex justify-content-between">
+                                                    <span>الهوامش الجانبية</span>
+                                                    <span class="text-olive">20px</span>
+                                                </label>
+                                                <input type="range" class="form-range" min="0" max="40" value="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between align-items-center mt-5 flex-row-reverse">
+                    <button class="btn btn-olive px-5" id="nextBtn">التالي</button>
+                    <button class="btn btn-outline-secondary px-5" id="prevBtn" style="display: none;">السابق</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="modal fade" id="contactFormModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg px-2" dir="rtl">
+                <div class="modal-header border-0 pb-0 justify-content-between">
+                    <h5 class="modal-title fw-bold">نموذج تواصل</h5>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">البريد الإلكتروني لاستقبال الرسائل</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-light border-start-0 rounded-end-3 text-start"
+                                placeholder="ادخل البريد الالكتروني">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">عنوان الخدمة</label>
+                        <input type="text" class="form-control bg-light rounded-3" placeholder="نموذج تواصل">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold">وصف الخدمة</label>
+                        <input type="text" class="form-control bg-light rounded-3"
+                            placeholder="نحن هنا للإجابة على جميع استفساراتك. تواصل معنا الآن">
+                    </div>
+
+                    <h6 class="fw-bold mb-3">اختر الحقول التي تريد ظهورها</h6>
+
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Field 1: Name -->
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <div class="form-check d-flex align-items-center gap-2 m-0">
+                                <input class="form-check-input m-0" type="checkbox" id="checkName" checked>
+                                <label class="form-check-label fw-bold" for="checkName">الاسم</label>
+                            </div>
+                            <input type="text" class="form-control form-control-sm bg-light rounded-3 border-0"
+                                placeholder="مثال : محمد" disabled style="max-width: 60%;">
+                        </div>
+
+                        <!-- Field 2: Mobile -->
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <div class="form-check d-flex align-items-center gap-2 m-0">
+                                <input class="form-check-input m-0" type="checkbox" id="checkMobile" checked>
+                                <label class="form-check-label fw-bold" for="checkMobile">رقم جوال التواصل</label>
+                            </div>
+                            <input type="text" class="form-control form-control-sm bg-light rounded-3 border-0"
+                                placeholder="+966587931245" disabled style="max-width: 60%;">
+                        </div>
+
+                        <!-- Field 3: Email -->
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <div class="form-check d-flex align-items-center gap-2 m-0">
+                                <input class="form-check-input m-0" type="checkbox" id="checkEmail" checked>
+                                <label class="form-check-label fw-bold" for="checkEmail">البريد الالكتروني</label>
+                            </div>
+                            <input type="text" class="form-control form-control-sm bg-light rounded-3 border-0"
+                                placeholder="email@email.com" disabled style="max-width: 60%;">
+                        </div>
+
+                        <!-- Field 4: Message -->
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <div class="form-check d-flex align-items-center gap-2 m-0">
+                                <input class="form-check-input m-0" type="checkbox" id="checkMsg">
+                                <label class="form-check-label fw-bold" for="checkMsg">الرسالة</label>
+                            </div>
+                            <div class="form-control form-control-sm bg-light rounded-3 border-0 text-muted small"
+                                style="height: 38px; line-height: 2.2; max-width: 60%; width: 100%;">الرسالة</div>
+                        </div>
+
+                        <!-- Field 5: Attachments -->
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <div class="form-check d-flex align-items-center gap-2 m-0">
+                                <input class="form-check-input m-0" type="checkbox" id="checkAttach">
+                                <label class="form-check-label fw-bold" for="checkAttach">المرفقات</label>
+                            </div>
+                            <label for="attachmentInput"
+                                class="border dashed-border rounded-3 text-center py-1 bg-light d-flex flex-column align-items-center justify-content-center cursor-pointer"
+                                style="height: 38px; max-width: 60%; width: 100%; cursor: pointer;">
+                                <i class="bi bi-cloud-arrow-up text-muted small" style="font-size: 10px;"></i>
+                                <small class="d-block text-muted" style="font-size: 8px;">ارفق الصور</small>
+                            </label>
+                            <input type="file" id="attachmentInput" hidden>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-olive w-100 rounded-3 mt-4 py-2 fw-bold"
+                        style="background-color: #a7b055; color: white;">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Social Networks Modal -->
+    <div class="modal fade" id="socialNetworksModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg px-2" dir="rtl">
+                <div class="modal-header border-0 pb-0 justify-content-between">
+                    <h5 class="modal-title fw-bold">شبكات التواصل</h5>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <p class="text-muted small mb-3">اختر مواقع التواصل الاجتماعي التي تريد اضافتها لصفحتك</p>
+
+                    <div class="d-flex flex-column gap-2">
+                        <!-- Instagram -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-instagram text-danger fs-5"></i>
+                                <span class="fw-bold small">انستجرام</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox" checked
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رابط حسابك" style="display: block; width: 180px;">
+                            </div>
+                        </div>
+
+                        <!-- Twitter -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-twitter-x text-dark fs-5"></i>
+                                <span class="fw-bold small">تويتر</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox"
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رابط حسابك" style="display: none; width: 180px;">
+                            </div>
+                        </div>
+
+                        <!-- TikTok -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-tiktok text-dark fs-5"></i>
+                                <span class="fw-bold small">تيك توك</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox"
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رابط حسابك" style="display: none; width: 180px;">
+                            </div>
+                        </div>
+
+                        <!-- Kaser -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-dark rounded-circle d-flex align-items-center justify-content-center text-warning fw-bold"
+                                    style="width: 24px; height: 24px; font-size: 14px;">K</div>
+                                <span class="fw-bold small">كاسر</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox"
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رابط حسابك" style="display: none; width: 180px;">
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-facebook text-primary fs-5"></i>
+                                <span class="fw-bold small">فيسبوك</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox"
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رابط حسابك" style="display: none; width: 180px;">
+                            </div>
+                        </div>
+
+                        <!-- Whatsapp -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-whatsapp text-success fs-5"></i>
+                                <span class="fw-bold small">واتساب</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox"
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رقم الواتساب" style="display: none; width: 180px;">
+                            </div>
+                        </div>
+
+                        <!-- Telegram -->
+                        <div class="bg-light rounded-3 p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-telegram text-info fs-5"></i>
+                                <span class="fw-bold small">تلجرام</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" type="checkbox"
+                                        onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'">
+                                </div>
+                                <input type="text" class="form-control form-control-sm border-0"
+                                    placeholder="ادخل رابط حسابك" style="display: none; width: 180px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-olive w-100 rounded-3 mt-4 py-2 fw-bold"
+                        style="background-color: #a7b055; color: white;">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Slider Modal -->
+    <div class="modal fade" id="sliderModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg px-2" dir="rtl">
+                <div class="modal-header border-0 pb-0 justify-content-between">
+                    <h5 class="modal-title fw-bold">سلايدر</h5>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <p class="fw-bold mb-1" style="font-size: 14px;">قم برفع الصور التي تريد عرضها مكنك رفع أكثر من صورة
+                        ليتم عرضها بشكل متتابع</p>
+                    <p class="text-muted small mb-3" style="font-size: 11px;">*يفضل أن تكون الصور بنفس الأبعاد لتحصل على
+                        مظهر أفضل</p>
+
+                    <button
+                        class="btn btn-outline-olive w-100 rounded-3 mb-3 d-flex align-items-center justify-content-center gap-2"
+                        style="border-style: dashed; border-color: #a7b055; color: #a7b055;">
+                        <i class="bi bi-plus-circle"></i>
+                        <span>اضافة صورة اخرى</span>
+                    </button>
+
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Slider Item 1 -->
+                        <div class="bg-light rounded-3 p-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div class="d-flex gap-1">
+                                    <button class="btn btn-light btn-sm border bg-white text-muted"><i
+                                            class="bi bi-chevron-up"></i></button>
+                                    <button class="btn btn-light btn-sm border bg-white text-muted"><i
+                                            class="bi bi-chevron-down"></i></button>
+                                </div>
+                                <button class="btn btn-light btn-sm border bg-white text-danger"><i
+                                        class="bi bi-trash"></i></button>
+                            </div>
+                            <!-- Image Preview Placeholder -->
+                            <div class="rounded-3 overflow-hidden mb-2" style="height: 120px;">
+                                <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=500&h=200&fit=crop"
+                                    class="w-100 h-100 object-fit-cover">
+                            </div>
+
+                            <label class="form-label small fw-bold">الرابط</label>
+                            <input type="text" class="form-control bg-white rounded-3 border-0"
+                                placeholder="ادخل الرابط الذي تريد أن يفتح عند الضغط على الصورة">
+                        </div>
+
+
+                    </div>
+
+                    <button class="btn btn-olive w-100 rounded-3 mt-4 py-2 fw-bold"
+                        style="background-color: #a7b055; color: white;">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Modal -->
+    <div class="modal fade" id="bannerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg px-2" dir="rtl">
+                <div class="modal-header border-0 pb-0 justify-content-between">
+                    <h5 class="modal-title fw-bold">بانر</h5>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <p class="fw-bold mb-3 small">قم برفع صورة البانر وحدد الرابط الذي تريد أن يفتح عند الضغط على البانر
+                    </p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Banner Item 1 -->
+                        <div class="bg-light rounded-3 p-3 position-relative">
+                            <div class="mb-2 position-relative">
+                                <label class="form-label small fw-bold">صورة البانر</label>
+                                <label
+                                    class="border rounded-3 text-center py-4 bg-white d-flex flex-column align-items-center justify-content-center cursor-pointer position-relative overflow-hidden"
+                                    style="border-style: dashed !important; height: 120px;">
+                                    <div class="position-absolute top-0 start-0 m-2 badge bg-olive text-white"
+                                        style="background-color: #a7b055; font-size: 10px;">AI</div>
+                                    <i class="bi bi-cloud-arrow-up text-muted fs-4"></i>
+                                    <small class="d-block text-muted mt-2">ارفق صورة البانر</small>
+                                    <input type="file" hidden>
+                                </label>
+                                <div class="text-muted small mt-1" style="font-size: 10px;">*ابعاد الصورة الموصى بها
+                                    400*1100</div>
+                            </div>
+
+                            <label class="form-label small fw-bold">الرابط</label>
+                            <input type="text" class="form-control bg-white rounded-3 border-0"
+                                placeholder="ادخل الرابط الذي تريد أن يفتح عند الضغط على البانر">
+                        </div>
+
+
+                    </div>
+
+                    <button class="btn btn-outline-olive w-100 rounded-3 mt-3 mb-2"
+                        style="border-color: #a7b055; color: #a7b055;">اضافة بنر اخر</button>
+                    <button class="btn btn-olive w-100 rounded-3 py-2 fw-bold"
+                        style="background-color: #a7b055; color: white;">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <!-- Landing Page Wizard Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentStep = 1;
+            const totalSteps = 5;
+            const stepPanes = document.querySelectorAll('.step-pane');
+            const stepItems = document.querySelectorAll('.step-item');
+            const stepLines = document.querySelectorAll('.step-line');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+
+            function showStep(step) {
+                // Hide all panes
+                stepPanes.forEach(pane => pane.classList.remove('active'));
+
+                // Show current pane
+                document.getElementById('step' + step).classList.add('active');
+
+                // Update stepper
+                stepItems.forEach(item => {
+                    const itemStep = parseInt(item.dataset.step);
+                    if (itemStep === step) {
+                        item.classList.add('active');
+                    } else if (itemStep < step) {
+                        item.classList.add('completed');
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.remove('active', 'completed');
+                    }
+                });
+
+                // Update step lines
+                stepLines.forEach((line, index) => {
+                    const lineStep = totalSteps - index;
+                    if (lineStep <= step) {
+                        line.classList.add('active');
+                    } else {
+                        line.classList.remove('active');
+                    }
+                });
+
+                // Update buttons
+                prevBtn.style.display = step > 1 ? 'block' : 'none';
+                nextBtn.textContent = step === totalSteps ? 'حفظ' : 'التالي';
+            }
+
+            nextBtn.addEventListener('click', function () {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    showStep(currentStep);
+                } else {
+                    // Save action
+                    alert('تم حفظ الإعدادات بنجاح!');
+                }
+            });
+
+            prevBtn.addEventListener('click', function () {
+                if (currentStep > 1) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+
+            // Initialize
+            showStep(1);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المليون مسوق - لوحة التحكم</title>
+    <!-- Bootstrap 5.3.3 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts - Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar d-flex flex-column" id="sidebar">
+            <div class="sidebar-header p-4 d-flex align-items-center gap-3">
+                <div class="logo-icon">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <div class="logo-text text-white">
+                    <div class="fw-bold">المــــليون مــــسوق</div>
+                    <small>Million Marketer</small>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav flex-grow-1 px-2 pt-3">
+                <ul class="nav flex-column gap-1">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/products.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-box-seam"></i>
+                            <span>المنتجات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/myproducts.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                            <span>منتجاتي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/finance.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-wallet2"></i>
+                            <span>المالية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/report.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span>التقارير</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/notifications.html" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                            <i class="bi bi-bell"></i>
+                            <span>الإشعارات</span>
+                        </a>
+                    </li>
+
+                    <!-- Settings Menu -->
+                    <li class="nav-item">
+                        <a href="#settingsSubmenu" class="nav-link rounded-3 d-flex align-items-center gap-2 collapsed"
+                            data-bs-toggle="collapse" role="button" aria-expanded="false"
+                            aria-controls="settingsSubmenu">
+                            <i class="bi bi-gear"></i>
+                            <span>الإعدادات</span>
+                            <i class="bi bi-chevron-down ms-auto small"></i>
+                        </a>
+                        <div class="collapse settings-submenu mt-1" id="settingsSubmenu">
+                            <ul class="nav flex-column gap-1 pe-3">
+                                <li class="nav-item">
+                                    <a href="pages/settings_profile.html"
+                                        class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-circle-fill" style="font-size: 6px;"></i>
+                                        <span>الملف الشخصي</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/settings_landing.html"
+                                        class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-circle-fill" style="font-size: 6px;"></i>
+                                        <span>إعدادات صفحة الهبوط</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link rounded-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-circle-fill" style="font-size: 6px;"></i>
+                                        <span>إعدادات المالية</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer Links -->
+            <div class="sidebar-footer p-3 border-top">
+                <a href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none py-2 px-3 rounded-3 footer-link">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>صفحة العقود</span>
+                </a>
+                <a href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none py-2 px-3 rounded-3 footer-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>تسجيل خروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content flex-grow-1">
+            <!-- Header -->
+            <header
+                class="bg-white py-3 px-4 border-bottom d-flex align-items-center justify-content-between sticky-top">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="sidebar-toggle" id="sidebarToggle" type="button">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <!-- Search Bar -->
+                    <div class="position-relative header-search">
+                        <input type="text" class="form-control bg-light border-0 ps-5 rounded-3 py-2"
+                            placeholder="البحث">
+                        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Notifications Dropdown -->
+                    <div class="dropdown">
+                        <button class="notification-btn btn rounded-3 position-relative" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <i class="bi bi-bell fs-5 text-secondary"></i>
+                            <span
+                                class="position-absolute top-0 start-0 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-start notifications-dropdown p-0 shadow-lg">
+                            <!-- Header -->
+                            <div
+                                class="notifications-header d-flex justify-content-between align-items-center p-3 border-bottom">
+                                <button class="btn btn-sm btn-light text-muted">وضع الكل كمقروء</button>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-bold">الاشـعـارات</span>
+                                    <i class="bi bi-bell text-muted"></i>
+                                </div>
+                            </div>
+                            <!-- Notifications List -->
+                            <div class="notifications-list">
+                                <!-- Notification Item 1 (Unread) -->
+                                <a href="#"
+                                    class="notification-item unread d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <span class="unread-dot"></span>
+                                    <div class="notification-icon">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <!-- Notification Item 2 (Unread) -->
+                                <a href="#"
+                                    class="notification-item unread d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <span class="unread-dot"></span>
+                                    <div class="notification-icon">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <!-- Notification Item 3 -->
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <!-- Notification Item 4 -->
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                                <!-- Notification Item 5 -->
+                                <a href="#"
+                                    class="notification-item d-flex align-items-start gap-3 p-3 text-decoration-none">
+                                    <div class="notification-icon">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+                                    <div class="notification-content flex-grow-1">
+                                        <div class="notification-text">منتج سماعة لاسلكية ارتفعت مبيعاته بنسبة 20%</div>
+                                    </div>
+                                    <span class="notification-time text-muted small">قبل ساعتين</span>
+                                </a>
+                            </div>
+                            <!-- Footer -->
+                            <div class="notifications-footer text-center p-3 border-top">
+                                <a href="pages/notifications.html" class="text-decoration-none text-muted small">عرض
+                                    الكل</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- landing page Button A -->
+                    <a href="store/pages/home.html" class="notification-btn btn rounded-3 text-decoration-none text-dark fw-bold"
+                        type="button">
+                        A
+                    </a>
+                    <!-- Profile Page -->
+
+                    <a href="pages/settings_profile.html" class="d-flex align-items-center gap-2 text-decoration-none">
+                        <img src="https://ui-avatars.com/api/?name=Abu+Ghazi&background=random" alt="User"
+                            class="rounded-circle user-avatar" width="45" height="45">
+                        <div class="d-none d-sm-block">
+                            <div class="fw-bold small text-dark">أبو غازي العتيبي</div>
+                            <div class="text-muted small" style="font-size: 11px;">aboghazi@gmail.com</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area p-4">
+                <!-- Welcome & Actions Row -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 welcome-section">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fs-4 fw-bold">أهلاً، غازي</span>
+                        <span class="wave-emoji">👋</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-2 bg-white px-3 py-2 rounded-3 border">
+                            <i class="bi bi-calendar3 text-muted"></i>
+                            <span>1 مايو 2025</span>
+                        </div>
+                        <button class="btn btn-success d-flex align-items-center gap-2">
+                            <i class="bi bi-download"></i>
+                            تصدير
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards Row -->
+                <div class="row g-3 mb-4">
+                    <!-- Card 1 - Clicks -->
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card h-100 border-0 shadow-sm">
+                            <div class="card-body d-flex justify-content-between align-items-center gap-3">
+                                
+                                <div>
+                                    <div class="fs-3 fw-bold">0</div>
+                                    <div class="text-muted small">عدد النقرات</div>
+                                </div>
+                                <div class="stat-icon bg-danger-subtle text-success rounded-3">
+                                    <img src="assets/icons/Group (3).svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                
+                                <small class="text-muted d-flex align-items-center">
+                                    <img src="assets/icons/down.svg" alt="" width="20px" height="20px">
+                                    <span class="text-danger px-1">0%</span> هبوطاً من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 - Sales -->
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card h-100 border-0 shadow-sm">
+                            <div class="card-body justify-content-between d-flex align-items-center gap-3">
+                                
+                                <div>
+                                    <div class="fs-3 fw-bold">0</div>
+                                    <div class="text-muted small">عدد المبيعات</div>
+                                </div>
+                                <div class="stat-icon bg-success-subtle text-info rounded-3">
+                                   <img src="assets/icons/Group (2).svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <small class="text-muted">
+                                    <img src="assets/icons/up.svg" alt="" width="20px" height="20px">
+                                    <span style="color: rgb(4, 211, 128);">0%</span> صعوداً من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 - Commission -->
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card h-100 border-0 shadow-sm">
+                            <div class="card-body justify-content-between d-flex align-items-center gap-3">
+                                
+                                <div>
+                                    <div class="fs-3 fw-bold">0 <small class="fs-6">ر.س</small></div>
+                                    <div class="text-muted small">العمولات المحققة</div>
+                                </div>
+                                <div class="stat-icon bg-primary-subtle text-warning rounded-3">
+                                   <img src="assets/icons/svgexport-15 - 2025-05-11T104739.633 1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <small class="text-muted d-flex align-items-center">
+                                    <img src="assets/icons/down.svg" alt="" width="20px" height="20px">
+                                    <span class="text-danger px-1">0%</span> هبوطاً من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 - Discount Code -->
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card h-100 border-0 shadow-sm">
+                            <div class="card-body justify-content-between d-flex align-items-center gap-3">
+                                <div>
+                                    <div class="fs-3 fw-bold">-</div>
+                                    <div class="text-muted small mt-1">كود الخصم</div>
+                                </div>
+                                <div class="stat-icon bg-danger-subtle text-danger rounded-3">
+                                   <img src="assets/icons/Group (1).svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0">
+                                <small class="text-muted">
+                                    <img src="assets/icons/up.svg" alt="" width="20px" height="20px">
+                                    <span style="color: rgb(4, 211, 128);">0%</span> صعوداً من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart & Notifications Row -->
+                <div class="row g-4 mb-4">
+                    <!-- Chart Section -->
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <div class="d-inline-flex chart-tabs" role="group">
+                                        <button type="button" class="btn active">النقرات</button>
+                                        <button type="button" class="btn">المبيعات</button>
+                                        <button type="button" class="btn">العمولات</button>
+                                    </div>
+                                </div>
+                                <div class="chart-container" style="height: 280px; position: relative;">
+                                    <canvas id="salesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Notifications Section -->
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100 px-3">
+                            <div
+                                class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3">
+                                <h6 class="mb-0 fw-bold">آخر الإشعارات</h6>
+                                <a href="#" class="text-success text-decoration-none small">عرض الكل</a>
+                            </div>
+                            <div class="notification-item bg-light rounded-3 p-3 border-end border-success border-3">
+                                <p class="mb-1 small fw-medium">تمت إضافة منتج جديد بنسبة عمولة 20%!</p>
+                                <small class="text-muted">قبل ساعتين</small>
+                            </div>
+
+                            <!-- empty state -->
+                            <!-- <div class="card-body d-flex align-items-center justify-content-center">
+                                <p class="text-muted text-center mb-0">لا يوجد إشعارات حتى الآن</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables Row -->
+                <div class="row g-4">
+                    <!-- Products Table -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div
+                                class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3">
+                                <h6 class="mb-0 fw-bold">المنتجات الأعلى أداءً</h6>
+                                <a href="#" class="text-success text-decoration-none small">عرض الكل</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr class="text-center">
+                                                <th class="fw-semibold text-muted">صورة المنتج</th>
+                                                <th class="fw-semibold text-muted">اسم المنتج</th>
+                                                <th class="fw-semibold text-muted">عدد النقرات</th>
+                                                <th class="fw-semibold text-muted">عدد المبيعات</th>
+                                                <th class="fw-semibold text-muted">العمولة</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="text-center">
+                                                <td><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=50&h=50&fit=crop"
+                                                        class="rounded-3" alt="Product" width="50" height="50"></td>
+                                                <td>طقم شنط</td>
+                                                <td>12</td>
+                                                <td>25</td>
+                                                <td class="text-success fw-semibold">240 ر.س</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Empty State -->
+                                <!-- <div class="text-center py-4">
+                                    <div class="empty-icon mb-3">
+                                        <i class="bi bi-bag text-warning" style="font-size: 48px; opacity: 0.5;"></i>
+                                    </div>
+                                    <p class="text-muted mb-0">ابدأ الترويج لتظهر المنتجات الأعلى أداءً هنا</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Discount Codes Table -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div
+                                class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-3">
+                                <h6 class="mb-0 fw-bold">أداء أكواد الخصم</h6>
+                                <a href="#" class="text-success text-decoration-none small">عرض الكل</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr class="text-center">
+
+                                                <th class="fw-semibold text-muted">مرات الاستخدام</th>
+                                                <th class="fw-semibold text-muted">المبيعات الناتجة</th>
+                                                <th class="fw-semibold text-muted">العمولة</th>
+                                                <th class="fw-semibold text-muted">الكود</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="text-center">
+
+                                                <td>65</td>
+                                                <td>1800 ر.س</td>
+                                                <td class="text-success fw-semibold">350 ر.س</td>
+
+                                                <td><span class="px-3 py-2">DISCON</span>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Empty State -->
+                                <!-- <div class="text-center py-4">
+                                    <div class="empty-icon mb-3">
+                                        <i class="bi bi-percent text-danger" style="font-size: 48px; opacity: 0.5;"></i>
+                                    </div>
+                                    <p class="text-muted mb-0">سيظهر أداء أكواد الخصم بعد بدء استخدامك للمنصة</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

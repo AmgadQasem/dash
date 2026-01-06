@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Million Marketer - Basic Information</title>
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light-custom py-3 sticky-top ">
+        <div class="container">
+            <!-- Logo (Right in RTL) -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
+                <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="text-start lh-1">
+                    <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
+                    <div class="fw-bold text-dark text-end logo-text-lg">المليون مسوق</div>
+                </div>
+            </a>
+
+
+            <!-- Action Buttons (Left in RTL) -->
+            <div class="d-flex align-items-center gap-3">
+                <div class="lang-switch text-muted d-flex align-items-center gap-1 cursor-pointer">
+                    <i class="fa-solid fa-globe"></i> <span>EN</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex flex-column bg-light-custom" style="min-height: calc(100vh - 76px);">
+
+        <div class="row flex-grow-1 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm my-4">
+
+                    <!-- Wizard Stepper -->
+                    <div class="wizard-stepper mb-5">
+                        <div class="step-line"></div>
+
+                        <!-- Step 1 (Active) -->
+                        <div class="step-item active">
+                            <div class="step-circle">1</div>
+                            <span class="step-label ms-2">بيانات أساسية</span>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="step-item">
+                            <div class="step-circle">2</div>
+                            <span class="step-label ms-2">منصات التسويق</span>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step-item">
+                            <div class="step-circle">3</div>
+                            <span class="step-label ms-2">المجالات المهتم فيها</span>
+                        </div>
+                    </div>
+
+                    <!-- Form Content -->
+                    <form>
+                        <h5 class="text-center mb-4 fw-bold text-dark">صورتك الشخصية</h5>
+
+                        <!-- Profile Upload -->
+                        <div class="profile-upload-container mb-4">
+                            <div class="profile-upload-icon"><i class="fa-regular fa-image"></i></div>
+                            <div class="add-icon-badge"><i class="fa-solid fa-plus"></i></div>
+                            <input type="file" class="position-absolute w-100 h-100 opacity-0" accept="image/*">
+                        </div>
+
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label class="form-label text-muted small fw-bold">الاسم</label>
+                            <input type="text" class="form-control bg-light-custom border-0 py-2" value="غازي العتيبي"
+                                placeholder="الاسم">
+                        </div>
+
+                        <!-- Mobile -->
+                        <div class="mb-3">
+                            <label class="form-label text-muted small fw-bold">رقم الجوال</label>
+                            <div class="input-group">
+                                <!-- Country Code Dropdown -->
+                                <button
+                                    class="btn btn-light dropdown-toggle border-0 d-flex align-items-center gap-1 bg-light-custom"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://flagcdn.com/w20/sa.png" alt="SA" width="20" id="selectedFlag">
+                                    <span class="small mx-1 text-muted" id="selectedCode">+966</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('sa', '+966')"><img
+                                                src="https://flagcdn.com/w20/sa.png" width="20"> +966</a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('ae', '+971')"><img
+                                                src="https://flagcdn.com/w20/ae.png" width="20"> +971</a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('kw', '+965')"><img
+                                                src="https://flagcdn.com/w20/kw.png" width="20"> +965</a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('eg', '+20')"><img
+                                                src="https://flagcdn.com/w20/eg.png" width="20"> +20</a></li>
+                                </ul>
+                                <input type="tel" class="form-control bg-light-custom border-0 text-end"
+                                    placeholder="ادخل رقم الجوال">
+                            </div>
+                        </div>
+
+                        <!-- Language -->
+                        <div class="mb-5">
+                            <label class="form-label text-muted small fw-bold">اللغة</label>
+                            <select class="form-select bg-light-custom border-0 py-2 text-muted">
+                                <option selected>اختر</option>
+                                <option value="ar">العربية</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="d-flex justify-content-between align-items-center mt-5">
+                            <a href="welcome.html" class="btn btn-outline-secondary px-5 py-2 rounded-3">تخطي</a>
+                            <!-- Next Button (Target Step 2 or finish) -->
+                            <a href="marketing_platforms.html" type="button"
+                                class="btn btn-main px-5 py-2 rounded-3 text-white fw-bold">التالي</a>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Country Code Update Logic if needed locally or move to main.js
+        function updateCountry(code, dial) {
+            const flagImg = document.getElementById('selectedFlag');
+            const codeSpan = document.getElementById('selectedCode');
+            if (flagImg) flagImg.src = `https://flagcdn.com/w20/${code}.png`;
+            if (codeSpan) codeSpan.textContent = dial;
+        }
+    </script>
+</body>
+
+</html>

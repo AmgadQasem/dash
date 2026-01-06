@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Million Marketer - تسجيل حساب جديد</title>
+
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid min-vh-100 d-flex flex-column">
+        <div class="row flex-grow-1">
+
+            <!-- Form Section (Right in RTL) -->
+            <div
+                class="col-lg-6 bg-white d-flex flex-column justify-content-center align-items-center p-4 p-md-5 position-relative">
+                <!-- Language Switcher -->
+                <div class="position-absolute top-0 start-0 m-4 text-muted lang-switch">
+                    <i class="fa-solid fa-globe me-1"></i> <span>EN</span>
+                </div>
+
+                <div class="auth-form-container">
+                    <h2 class="fw-bold mb-4 text-dark text-center">تسجيل حساب في منصة المليون مسوق</h2>
+
+                    <form>
+                        <!-- User Type Toggle -->
+                        <div class="user-type-toggle d-flex mb-4">
+                            <button type="button" class="btn w-50 py-2 active" id="btn-marketer">مسوق</button>
+                            <button type="button" class="btn w-50 py-2" id="btn-merchant">تاجر</button>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label text-muted font-09">الاسم</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg bg-light-custom border-0"
+                                    id="name" placeholder="ادخل اسمك">
+                                <span class="input-group-text bg-light-custom border-0 text-muted"><i
+                                        class="fa-regular fa-user"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-muted font-09">البريد الالكتروني</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control form-control-lg bg-light-custom border-0"
+                                    id="email" placeholder="ادخل بريدك الالكتروني">
+                                <span class="input-group-text bg-light-custom border-0 text-muted"><i
+                                        class="fa-regular fa-envelope"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Mobile -->
+                        <div class="mb-3">
+                            <label for="mobile" class="form-label text-muted font-09">رقم الجوال</label>
+                            <div class="input-group">
+                                <!-- Country Code Dropdown -->
+                                <button
+                                    class="btn btn-light dropdown-toggle border-0 d-flex align-items-center gap-1 bg-light-custom"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://flagcdn.com/w20/sa.png" alt="SA" width="20" id="selectedFlag">
+                                    <span class="small mx-1 text-muted" id="selectedCode">+966</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('sa', '+966')"><img
+                                                src="https://flagcdn.com/w20/sa.png" width="20"> +966</a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('ae', '+971')"><img
+                                                src="https://flagcdn.com/w20/ae.png" width="20"> +971</a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('kw', '+965')"><img
+                                                src="https://flagcdn.com/w20/kw.png" width="20"> +965</a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            onclick="updateCountry('eg', '+20')"><img
+                                                src="https://flagcdn.com/w20/eg.png" width="20"> +20</a></li>
+                                </ul>
+                                <input type="tel"
+                                    class="form-control form-control-lg bg-light-custom border-0 text-end rounded-0-important"
+                                    id="mobile" placeholder="ادخل رقم الجوال">
+                                <span class="input-group-text bg-light-custom border-0 text-muted"><i
+                                        class="fa-solid fa-phone-flip"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between">
+                                <label for="password" class="form-label text-muted font-09">كلمة المرور</label>
+                                <a href="#" class="text-secondary small text-decoration-none font-08">اقترح كلمة مرور
+                                    عشوائية</a>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light-custom border-0 text-muted"><i
+                                        class="fa-solid fa-lock"></i></span>
+                                <input type="password" class="form-control form-control-lg bg-light-custom border-0"
+                                    id="password" placeholder="ادخل كلمة المرور">
+                                <span class="input-group-text bg-light-custom border-0 text-muted cursor-pointer"
+                                    id="togglePassword"><i class="fa-regular fa-eye"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <a href="welcome.html" type="button"
+                            class="btn btn-main btn-lg w-100 py-3 rounded-3 text-white fw-bold mb-3">تسجيل
+                            الدخول</a>
+
+                        <!-- Footer Links -->
+                        <div class="text-center mb-4">
+                            <span class="text-muted font-09">لديك حساب بالفعل؟</span>
+                            <a href="../index.html" class="text-decoration-none text-olive fw-bold font-09 ms-1">تسجيل
+                                دخول</a>
+                        </div>
+
+                        <!-- Social Login -->
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="social-login-btn rounded-3 text-muted">
+                                  <img src="../assets/icons/instegram.png" width="20"alt="instegram">
+                            </div>
+                            <div class="social-login-btn rounded-3 text-muted">
+                                <img src="../assets/icons/Google.png" width="20"alt="Google">
+                            </div>
+                            <div class="social-login-btn rounded-3 text-muted">
+                                  <img src="../assets/icons/apple.png" width="20"alt="apple">
+                            </div>
+                            <div class="social-login-btn rounded-3 text-muted">
+                                  <img src="../assets/icons/x.png" width="20"alt="x">
+                            </div>
+                            <div class="social-login-btn rounded-3 text-muted">
+                                  <img src="../assets/icons/microsoft.png" width="20"alt="microsoft">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Image/Illustration Section (Left in RTL) -->
+            <div
+                class="col-lg-6 d-none d-lg-flex flex-column justify-content-center align-items-center position-relative left-panel">
+                <!-- Logo -->
+                <div class="brand-logo mb-5">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="text-start lh-1">
+                            <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
+                            <div class="fw-bold text-dark text-end logo-text-lg">المليـــون مســـوق</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illustration -->
+                <div class="illustration-container position-relative">
+                    <img src="../assets/images/Frame.png" alt="Marketing Illustration"
+                        class="img-fluid auth-illustration-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Simple toggle for User Type
+        const btnMarketer = document.getElementById('btn-marketer');
+        const btnMerchant = document.getElementById('btn-merchant');
+
+        if (btnMarketer && btnMerchant) {
+            btnMarketer.addEventListener('click', () => {
+                btnMarketer.classList.add('active');
+                btnMerchant.classList.remove('active');
+            });
+            btnMerchant.addEventListener('click', () => {
+                btnMerchant.classList.add('active');
+                btnMarketer.classList.remove('active');
+            });
+        }
+
+        // Simple Toggle Password
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        if (togglePassword && passwordInput) {
+            togglePassword.addEventListener('click', function () {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.innerHTML = type === 'password' ? '<i class="fa-regular fa-eye"></i>' : '<i class="fa-regular fa-eye-slash"></i>';
+            });
+        }
+
+        // Country Code Update
+        function updateCountry(code, dial) {
+            const flagImg = document.getElementById('selectedFlag');
+            const codeSpan = document.getElementById('selectedCode');
+            if (flagImg) flagImg.src = `https://flagcdn.com/w20/${code}.png`;
+            if (codeSpan) codeSpan.textContent = dial;
+        }
+    </script>
+</body>
+
+</html>
