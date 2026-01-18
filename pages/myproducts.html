@@ -24,7 +24,7 @@
         <aside class="sidebar d-flex flex-column" id="sidebar">
             <div class="sidebar-header p-4 d-flex align-items-center gap-3">
                 <div class="logo-icon">
-                    <i class="bi bi-shop"></i>
+                    <img src="../assets/icons/milion-logo.svg" width="30" alt="Logo">
                 </div>
                 <div class="logo-text text-white">
                     <div class="fw-bold">المــــليون مــــسوق</div>
@@ -209,8 +209,8 @@
                         </div>
                     </div>
                     <!-- landing page Button A -->
-                    <a href="../store/pages/home.html" class="notification-btn btn rounded-3 text-decoration-none text-dark fw-bold"
-                        type="button">
+                    <a href="../store/pages/home.html"
+                        class="notification-btn btn rounded-3 text-decoration-none text-dark fw-bold" type="button">
                         A
                     </a>
 
@@ -310,8 +310,10 @@
                                     <div class="info-area">
                                         <div class="info-header">
                                             <h6>سماعة رأس لاسلكية</h6>
-                                            <div class="price-tag"><span class="price-icon"></span> 30
-                                                <small>ر.س</small>
+                                            <div class="price-tag"><span class="price">30
+                                                    <small><img src="../assets/icons/light-green-price.svg"
+                                                            alt=""></small>
+                                                </span>
                                             </div>
                                         </div>
                                         <p class="description">سماعة رأس لاسلكية بتصميم مريح وجودة صوت عالية مثالية
@@ -369,8 +371,10 @@
                                     <div class="info-area">
                                         <div class="info-header">
                                             <h6>سماعة رأس لاسلكية</h6>
-                                            <div class="price-tag"><span class="price-icon"></span> 30
-                                                <small>ر.س</small>
+                                            <div class="price-tag"><span class="price">30
+                                                    <small><img src="../assets/icons/light-green-price.svg"
+                                                            alt=""></small>
+                                                </span>
                                             </div>
                                         </div>
                                         <p class="description">سماعة رأس لاسلكية بتصميم مريح وجودة صوت عالية مثالية
@@ -428,8 +432,10 @@
                                     <div class="info-area">
                                         <div class="info-header">
                                             <h6>سماعة رأس لاسلكية</h6>
-                                            <div class="price-tag"><span class="price-icon"></span> 30
-                                                <small>ر.س</small>
+                                            <div class="price-tag"><span class="price">30
+                                                    <small><img src="../assets/icons/light-green-price.svg"
+                                                            alt=""></small>
+                                                </span>
                                             </div>
                                         </div>
                                         <p class="description">سماعة رأس لاسلكية بتصميم مريح وجودة صوت عالية مثالية
@@ -487,8 +493,10 @@
                                     <div class="info-area">
                                         <div class="info-header">
                                             <h6>سماعة رأس لاسلكية</h6>
-                                            <div class="price-tag"><span class="price-icon"></span> 30
-                                                <small>ر.س</small>
+                                            <div class="price-tag"><span class="price">30
+                                                    <small><img src="../assets/icons/light-green-price.svg"
+                                                            alt=""></small>
+                                                </span>
                                             </div>
                                         </div>
                                         <p class="description">سماعة رأس لاسلكية بتصميم مريح وجودة صوت عالية مثالية
@@ -546,8 +554,10 @@
                                     <div class="info-area">
                                         <div class="info-header">
                                             <h6>سماعة رأس لاسلكية</h6>
-                                            <div class="price-tag"><span class="price-icon"></span> 30
-                                                <small>ر.س</small>
+                                            <div class="price-tag"><span class="price">30
+                                                    <small><img src="../assets/icons/light-green-price.svg"
+                                                            alt=""></small>
+                                                </span>
                                             </div>
                                         </div>
                                         <p class="description">سماعة رأس لاسلكية بتصميم مريح وجودة صوت عالية مثالية
@@ -605,8 +615,8 @@
                                     <div class="info-area">
                                         <div class="info-header">
                                             <h6>سماعة رأس لاسلكية</h6>
-                                            <div class="price-tag"><span class="price-icon"></span> 30
-                                                <small>ر.س</small>
+                                            <div class="price-tag"> 30
+                                                <small><img src="../assets/icons/light-green-price.svg" alt=""></small>
                                             </div>
                                         </div>
                                         <p class="description">سماعة رأس لاسلكية بتصميم مريح وجودة صوت عالية مثالية
@@ -700,6 +710,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const copyButtons = document.querySelectorAll('.copy-btn');
+
+            copyButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    let textToCopy = '';
+                    // Check if it's a tracking link
+                    const linkBox = this.closest('.link-box');
+                    if (linkBox) {
+                        const linkText = linkBox.querySelector('.link-text');
+                        if (linkText) textToCopy = linkText.textContent.trim();
+                    }
+
+                    // Check if it's a coupon
+                    const couponRow = this.closest('.coupon-row');
+                    if (couponRow) {
+                        const couponValue = couponRow.querySelector('.coupon-value');
+                        if (couponValue) textToCopy = couponValue.textContent.trim();
+                    }
+
+                    if (textToCopy) {
+                        navigator.clipboard.writeText(textToCopy).then(() => {
+                            // Visual feedback
+                            const originalContent = this.innerHTML;
+                            this.innerHTML = '<i class="bi bi-check2"></i> تم النسخ';
+                            this.classList.add('text-success');
+
+                            setTimeout(() => {
+                                this.innerHTML = originalContent;
+                                this.classList.remove('text-success');
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy: ', err);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

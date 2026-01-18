@@ -4,9 +4,49 @@ document.addEventListener('DOMContentLoaded', function() {
     initSalesChart();
     initChartTabs();
     initResponsiveSidebar();
+    initPasswordToggle();
     // initNavigation(); // Removed to fix link navigation
     initAnimations();
 });
+
+// ===== Password Toggle =====
+function initPasswordToggle() {
+    const toggles = document.querySelectorAll('.password-toggle');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            // Try to find the input relative to the toggle icon
+            // 1. Previous sibling (common in some layouts)
+            let input = this.previousElementSibling;
+            
+            // 2. If not found or not input, check parent container
+            if (!input || input.tagName !== 'INPUT') {
+                const parent = this.closest('.position-relative, .input-group');
+                if (parent) {
+                    input = parent.querySelector('input[type="password"], input[type="text"]');
+                }
+            }
+            
+            if (input) {
+                // Toggle Type
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                
+                // Toggle Icon (Bootstrap Icons)
+                // The toggle might be the <i> itself or a wrapper containing <i>
+                const icon = this.tagName === 'I' ? this : this.querySelector('i');
+                if (icon) {
+                    if (icon.classList.contains('bi-eye')) {
+                        icon.classList.remove('bi-eye');
+                        icon.classList.add('bi-eye-slash');
+                    } else if (icon.classList.contains('bi-eye-slash')) {
+                        icon.classList.remove('bi-eye-slash');
+                        icon.classList.add('bi-eye');
+                    }
+                }
+            }
+        });
+    });
+}
 
 // ===== Sales Chart =====
 function initSalesChart() {
@@ -101,12 +141,6 @@ function initSalesChart() {
                 pointBackgroundColor: '#ffffff', // White inner
                 pointBorderColor: (context) => {
                     // Dynamic border color based on index or just use the gradient color at that point approx?
-                    // Simpler: use the chart stroke color or a fixed blend.
-                    // Image shows purple rings? Let's stick to matching line colors or a nice contrasting ring.
-                    // Actually image shows White Center, Purple/Color Ring. 
-                    // Let's use a nice dynamic color or localized.
-                    // For now, let's match the Olive theme or the Blue-Olive blend.
-                    // Simplification: Use a solid color for consistency or gradient if possible (not easy on points).
                     return '#a991d6'; // Light purple as seen in reference image dots
                 },
                 pointBorderWidth: 4,
@@ -114,10 +148,6 @@ function initSalesChart() {
                 pointHoverBackgroundColor: '#a991d6',
                 pointHoverBorderColor: '#fff',
                 pointHoverBorderWidth: 3,
-                
-                // Show points only on hover or specific indices?
-                // Image shows specific points. Chart.js shows all by default.
-                // We'll show all but style them nicely.
             }]
         },
         options: {
@@ -267,10 +297,6 @@ function initResponsiveSidebar() {
     });
 }
 
-// ===== Navigation Active State =====
-// function initNavigation() {
-    // Removed to allow default link behavior for multi-page navigation
-// }
 
 // ===== Animations =====
 function initAnimations() {
