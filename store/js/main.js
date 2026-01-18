@@ -52,15 +52,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Toggle Password Visibility
-    const togglePassword = document.querySelectorAll('#togglePassword');
-    togglePassword.forEach(toggle => {
+    // Toggle Password Visibility (Global)
+    const passwordToggles = document.querySelectorAll('.password-toggle');
+    passwordToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
-            const input = this.parentElement.querySelector('input');
+            // Find input in the same input-group or parent wrapper
+            const parent = this.closest('.input-group') || this.parentElement;
+            const input = parent.querySelector('input');
+            
             if (input) {
                 const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
                 input.setAttribute('type', type);
-                this.innerHTML = type === 'password' ? '<i class="fa-regular fa-eye"></i>' : '<i class="fa-regular fa-eye-slash"></i>';
+                
+                // Handle FontAwesome Icons
+                const icon = this.tagName === 'I' ? this : this.querySelector('i');
+                if (icon) {
+                    if (icon.classList.contains('fa-eye')) {
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else if (icon.classList.contains('fa-eye-slash')) {
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                }
             }
         });
     });

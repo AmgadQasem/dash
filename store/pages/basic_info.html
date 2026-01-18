@@ -23,7 +23,8 @@
         <div class="container">
             <!-- Logo (Right in RTL) -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
-                <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="logo-icon text-olive display-6"><img src="../assets/icons/milion-logo.svg" width="40"
+                        alt="Logo"></div>
                 <div class="text-start lh-1">
                     <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
                     <div class="fw-bold text-dark text-end logo-text-lg">المليون مسوق</div>
@@ -44,28 +45,33 @@
 
         <div class="row flex-grow-1 justify-content-center">
             <div class="col-lg-8 col-xl-6">
-                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm my-4">
+                <div class="bg-white p-md-5 rounded-4 my-4">
 
                     <!-- Wizard Stepper -->
-                    <div class="wizard-stepper mb-5">
-                        <div class="step-line"></div>
+                    <div class="wizard-stepper mb-5 bg-white p-3 border-bottom">
 
-                        <!-- Step 1 (Active) -->
-                        <div class="step-item active">
-                            <div class="step-circle">1</div>
-                            <span class="step-label ms-2">بيانات أساسية</span>
+                        <!-- Step 1 (Active - Current Page) -->
+                        <div class="step-item completed">
+                            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                            <span class="step-label">بيانات أساسية</span>
                         </div>
+
+                        <!-- Line 1-2 -->
+                        <div class="step-line completed"></div>
 
                         <!-- Step 2 -->
                         <div class="step-item">
                             <div class="step-circle">2</div>
-                            <span class="step-label ms-2">منصات التسويق</span>
+                            <span class="step-label">منصات التسويق</span>
                         </div>
+
+                        <!-- Line 2-3 -->
+                        <div class="step-line"></div>
 
                         <!-- Step 3 -->
                         <div class="step-item">
                             <div class="step-circle">3</div>
-                            <span class="step-label ms-2">المجالات المهتم فيها</span>
+                            <span class="step-label">المجالات المهتم فيها</span>
                         </div>
                     </div>
 
@@ -81,14 +87,14 @@
                         </div>
 
                         <!-- Name -->
-                        <div class="mb-3">
+                        <div class="mb-3 px-2">
                             <label class="form-label text-muted small fw-bold">الاسم</label>
                             <input type="text" class="form-control bg-light-custom border-0 py-2" value="غازي العتيبي"
                                 placeholder="الاسم">
                         </div>
 
                         <!-- Mobile -->
-                        <div class="mb-3">
+                        <div class="mb-3 px-2">
                             <label class="form-label text-muted small fw-bold">رقم الجوال</label>
                             <div class="input-group">
                                 <!-- Country Code Dropdown -->
@@ -118,17 +124,26 @@
                         </div>
 
                         <!-- Language -->
-                        <div class="mb-5">
+                        <div class="mb-5 px-2">
                             <label class="form-label text-muted small fw-bold">اللغة</label>
-                            <select class="form-select bg-light-custom border-0 py-2 text-muted">
-                                <option selected>اختر</option>
-                                <option value="ar">العربية</option>
-                                <option value="en">English</option>
-                            </select>
+                            <div class="dropdown w-100">
+                                <button
+                                    class="btn btn-light bg-light-custom border-0 w-100 d-flex justify-content-between align-items-center py-2 text-muted dropdown-toggle"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languageDropdown">
+                                    <span>اختر</span>
+                                </button>
+                                <ul class="dropdown-menu w-100 text-end">
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="selectLanguage('ar', 'العربية')">العربية</a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="selectLanguage('en', 'English')">English</a></li>
+                                </ul>
+                                <input type="hidden" id="selectedLanguage" name="language">
+                            </div>
                         </div>
 
                         <!-- Actions -->
-                        <div class="d-flex justify-content-between align-items-center mt-5">
+                        <div class="d-flex justify-content-between align-items-center mt-5 px-2">
                             <a href="welcome.html" class="btn btn-outline-secondary px-5 py-2 rounded-3">تخطي</a>
                             <!-- Next Button (Target Step 2 or finish) -->
                             <a href="marketing_platforms.html" type="button"
@@ -146,6 +161,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
+        // Language Selection Logic
+        function selectLanguage(code, name) {
+            const dropdownBtn = document.getElementById('languageDropdown');
+            const hiddenInput = document.getElementById('selectedLanguage');
+
+            // Update button text (keeping the toggler icon)
+            dropdownBtn.querySelector('span').textContent = name;
+
+            // Update hidden input
+            hiddenInput.value = code;
+        }
+
         // Country Code Update Logic if needed locally or move to main.js
         function updateCountry(code, dial) {
             const flagImg = document.getElementById('selectedFlag');

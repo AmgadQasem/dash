@@ -108,15 +108,16 @@
                                         class="fa-solid fa-lock"></i></span>
                                 <input type="password" class="form-control form-control-lg bg-light-custom border-0"
                                     id="password" placeholder="ادخل كلمة المرور">
-                                <span class="input-group-text bg-light-custom border-0 text-muted cursor-pointer"
-                                    id="togglePassword"><i class="fa-regular fa-eye"></i></span>
+                                <span
+                                    class="input-group-text bg-light-custom border-0 text-muted cursor-pointer password-toggle"><i
+                                        class="fa-regular fa-eye"></i></span>
                             </div>
                         </div>
 
                         <!-- Submit Button -->
                         <a href="welcome.html" type="button"
                             class="btn btn-main btn-lg w-100 py-3 rounded-3 text-white fw-bold mb-3">تسجيل
-                            الدخول</a>
+                            حساب</a>
 
                         <!-- Footer Links -->
                         <div class="text-center mb-4">
@@ -128,19 +129,19 @@
                         <!-- Social Login -->
                         <div class="d-flex justify-content-center gap-2">
                             <div class="social-login-btn rounded-3 text-muted">
-                                  <img src="../assets/icons/instegram.png" width="20"alt="instegram">
+                                <img src="../assets/icons/instegram.svg" width="20" alt="instegram">
                             </div>
                             <div class="social-login-btn rounded-3 text-muted">
-                                <img src="../assets/icons/Google.png" width="20"alt="Google">
+                                <img src="../assets/icons/Google.png" width="20" alt="Google">
                             </div>
                             <div class="social-login-btn rounded-3 text-muted">
-                                  <img src="../assets/icons/apple.png" width="20"alt="apple">
+                                <img src="../assets/icons/apple.png" width="20" alt="apple">
                             </div>
                             <div class="social-login-btn rounded-3 text-muted">
-                                  <img src="../assets/icons/x.png" width="20"alt="x">
+                                <img src="../assets/icons/x.svg" width="20" alt="x">
                             </div>
                             <div class="social-login-btn rounded-3 text-muted">
-                                  <img src="../assets/icons/microsoft.png" width="20"alt="microsoft">
+                                <img src="../assets/icons/microsoft.png" width="20" alt="microsoft">
                             </div>
                         </div>
                     </form>
@@ -153,7 +154,8 @@
                 <!-- Logo -->
                 <div class="brand-logo mb-5">
                     <div class="d-flex align-items-center gap-2">
-                        <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="logo-icon text-olive display-6"><img src="../assets/icons/milion-logo.svg"
+                                width="40" alt="Logo"></div>
                         <div class="text-start lh-1">
                             <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
                             <div class="fw-bold text-dark text-end logo-text-lg">المليـــون مســـوق</div>
@@ -189,16 +191,7 @@
             });
         }
 
-        // Simple Toggle Password
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
-        if (togglePassword && passwordInput) {
-            togglePassword.addEventListener('click', function () {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                this.innerHTML = type === 'password' ? '<i class="fa-regular fa-eye"></i>' : '<i class="fa-regular fa-eye-slash"></i>';
-            });
-        }
+
 
         // Country Code Update
         function updateCountry(code, dial) {

@@ -23,7 +23,8 @@
         <div class="container">
             <!-- Logo (Right in RTL) -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
-                <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="logo-icon text-olive display-6"><img src="../assets/icons/milion-logo.svg" width="40"
+                        alt="Logo"></div>
                 <div class="text-start lh-1">
                     <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
                     <div class="fw-bold text-dark text-end logo-text-lg">المليون مسوق</div>
@@ -48,32 +49,37 @@
                 <div class="px-2">
 
                     <!-- Wizard Stepper -->
-                    <div class="wizard-stepper mb-5 bg-white p-3 rounded-4 shadow-sm">
-                        <div class="step-line"></div>
+                    <div class="wizard-stepper mb-5 bg-white p-3 border-bottom">
 
-                        <!-- Step 1 (Done) -->
-                        <div class="step-item active">
+                        <!-- Step 1 (Completed) -->
+                        <div class="step-item completed">
                             <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-                            <span class="step-label ms-2">بيانات أساسية</span>
+                            <span class="step-label">بيانات أساسية</span>
                         </div>
 
-                        <!-- Step 2 (Done) -->
-                        <div class="step-item active">
+                        <!-- Line 1-2 (completed) -->
+                        <div class="step-line completed"></div>
+
+                        <!-- Step 2 (Completed) -->
+                        <div class="step-item completed">
                             <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-                            <span class="step-label ms-2">منصات التسويق</span>
+                            <span class="step-label">منصات التسويق</span>
                         </div>
 
-                        <!-- Step 3 (Active) -->
-                        <div class="step-item active">
-                            <div class="step-circle">3</div>
-                            <span class="step-label ms-2">المجالات المهتم فيها</span>
+                        <!-- Line 2-3 (completed) -->
+                        <div class="step-line completed"></div>
+
+                        <!-- Step 3 (Completed - Current Page) -->
+                        <div class="step-item completed">
+                            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                            <span class="step-label">المجالات المهتم فيها</span>
                         </div>
                     </div>
 
                     <h5 class="text-center mb-4 fw-bold text-dark">اختر أنواع المنتجات التي تحب تروّج لها</h5>
 
                     <!-- Interests Grid -->
-                    <div class="interests-container bg-white p-4 rounded-4 shadow-sm text-center mb-5">
+                    <div class="interests-container bg-white p-4 rounded-4  text-center mb-5">
 
                         <div class="d-flex flex-wrap justify-content-center gap-2">
                             <!-- Example Items based on image -->
@@ -105,7 +111,7 @@
                         <a href="marketing_platforms.html"
                             class="btn btn-outline-secondary px-5 py-2 rounded-3">السابق</a>
                         <!-- Finish / Dashboard Link -->
-                        <a href="../index.html" class="btn btn-main px-5 py-2 rounded-3 text-white fw-bold">انهاء</a>
+                        <a href="../../index.html" class="btn btn-main px-5 py-2 rounded-3 text-white fw-bold">انهاء</a>
                     </div>
 
                 </div>

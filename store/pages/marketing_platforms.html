@@ -23,7 +23,8 @@
         <div class="container">
             <!-- Logo (Right in RTL) -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
-                <div class="logo-icon text-olive display-6"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="logo-icon text-olive display-6"><img src="../assets/icons/milion-logo.svg" width="40"
+                        alt="Logo"></div>
                 <div class="text-start lh-1">
                     <div class="fw-bold text-dark logo-text-lg">Million Marketer</div>
                     <div class="fw-bold text-dark text-end logo-text-lg">المليون مسوق</div>
@@ -48,208 +49,219 @@
                 <div class="px-2">
 
                     <!-- Wizard Stepper -->
-                    <div class="wizard-stepper mb-5 bg-white p-3 rounded-4 shadow-sm">
-                        <div class="step-line"></div>
+                    <div class="wizard-stepper mb-5 bg-white p-3 border-bottom">
 
-                        <!-- Step 1 (Done) -->
-                        <div class="step-item active">
+                        <!-- Step 1 (Completed) -->
+                        <div class="step-item completed">
                             <div class="step-circle"><i class="fa-solid fa-check"></i></div>
-                            <span class="step-label ms-2">بيانات أساسية</span>
+                            <span class="step-label">بيانات أساسية</span>
                         </div>
 
-                        <!-- Step 2 (Active) -->
-                        <div class="step-item active">
-                            <div class="step-circle">2</div>
-                            <span class="step-label ms-2">منصات التسويق</span>
+                        <!-- Line 1-2 (completed) -->
+                        <div class="step-line completed"></div>
+
+                        <!-- Step 2 (Completed - Current Page) -->
+                        <div class="step-item completed">
+                            <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                            <span class="step-label">منصات التسويق</span>
                         </div>
+
+                        <!-- Line 2-3 (completed) -->
+                        <div class="step-line completed"></div>
 
                         <!-- Step 3 -->
                         <div class="step-item">
                             <div class="step-circle">3</div>
-                            <span class="step-label ms-2">المجالات المهتم فيها</span>
+                            <span class="step-label">المجالات المهتم فيها</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="text-center mb-4 fw-bold text-dark">حدّد المنصات اللي بتحب تروّج عليها منتجاتك</h5>
+
+                <!-- Platform List -->
+                <div class="platform-list">
+
+                    <!-- Item: Caser (Example logo placeholder using icon) -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-dark"><i class="fa-solid fa-k"></i></div>
+                                <span class="fw-bold small">كاسر</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-caser">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
                         </div>
                     </div>
 
-                    <h5 class="text-center mb-4 fw-bold text-dark">حدّد المنصات اللي بتحب تروّج عليها منتجاتك</h5>
-
-                    <!-- Platform List -->
-                    <div class="platform-list">
-
-                        <!-- Item: Caser (Example logo placeholder using icon) -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-dark"><i class="fa-solid fa-k"></i></div>
-                                    <span class="fw-bold small">كاسر</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-caser">
-                                </div>
+                    <!-- Item: Instagram -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-danger"><img src="../assets/icons/instegram.svg"
+                                        width="24" height="24" alt="Instagram"></div>
+                                <span class="fw-bold small">انستجرام</span>
                             </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-instagram">
                             </div>
                         </div>
-
-                        <!-- Item: Instagram -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-danger"><i class="fa-brands fa-instagram"></i></div>
-                                    <span class="fw-bold small">انستجرام</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-instagram">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
                         </div>
-
-                        <!-- Item: Twitter -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-dark"><i class="fa-brands fa-x-twitter"></i></div>
-                                    <span class="fw-bold small">تويتر</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-twitter">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
-                        </div>
-
-                        <!-- Item: TikTok -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-dark"><i class="fa-brands fa-tiktok"></i></div>
-                                    <span class="fw-bold small">تيك توك</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-tiktok">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
-                        </div>
-
-                        <!-- Item: Facebook -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-primary"><i class="fa-brands fa-facebook"></i></div>
-                                    <span class="fw-bold small">فيسبوك</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-facebook">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
-                        </div>
-
-                        <!-- Item: WhatsApp -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-success"><i class="fa-brands fa-whatsapp"></i></div>
-                                    <span class="fw-bold small">واتساب</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-whatsapp">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
-                        </div>
-
-                        <!-- Item: Telegram -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-info"><i class="fa-brands fa-telegram"></i></div>
-                                    <span class="fw-bold small">تلجرام</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-telegram">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
-                        </div>
-
-                        <!-- Item: Snapchat -->
-                        <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="platform-icon text-warning"><i class="fa-brands fa-snapchat"></i></div>
-                                    <span class="fw-bold small">سناب شات</span>
-                                </div>
-                                <div class="form-check form-switch m-0 p-0">
-                                    <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
-                                        type="checkbox" role="switch" id="switch-snapchat">
-                                </div>
-                            </div>
-                            <div class="platform-input-container">
-                                <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
-                            </div>
-                        </div>
-
-                        <!-- Add Other Platform -->
-                        <div class="other-platform-section">
-                            <div class="platform-item mb-4 bg-light rounded-3 p-3  border bg-light cursor-pointer text-muted"
-                                id="btn-other-platform">
-                                <i class="fa-solid fa-plus-circle me-1"></i> منصة أخرى
-                            </div>
-
-                            <!-- Expanded Form (Hidden by default) -->
-                            <div class="other-platform-form mb-4 bg-light rounded-3 p-4 border d-none"
-                                id="form-other-platform">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h6 class="fw-bold text-dark m-0">منصة أخرى</h6>
-                                    <button type="button" class="btn-close small" id="close-other-platform"></button>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label text-muted small fw-bold">اسم المنصة</label>
-                                    <input type="text" class="form-control bg-white border-0 py-2"
-                                        placeholder="ادخل اسم المنصة">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label text-muted small fw-bold">رابط حسابك</label>
-                                    <input type="text" class="form-control bg-white border-0 py-2"
-                                        placeholder="ادخل رابط حسابك">
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
-                    <!-- Actions -->
-                    <div class="d-flex justify-content-between align-items-center mt-5 mb-5">
-                        <a href="basic_info.html" class="btn btn-outline-secondary px-5 py-2 rounded-3">السابق</a>
-                        <a href="interests.html" class="btn btn-main px-5 py-2 rounded-3 text-white fw-bold">التالي</a>
+                    <!-- Item: Twitter -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-dark"><img src="../assets/icons/x.svg" width="24"
+                                        height="24" alt="X"></div>
+                                <span class="fw-bold small">تويتر</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-twitter">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                        </div>
+                    </div>
+
+                    <!-- Item: TikTok -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-dark"><img src="../assets/icons/tiktok.svg" width="24"
+                                        height="24" alt="TikTok"></div>
+                                <span class="fw-bold small">تيك توك</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-tiktok">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                        </div>
+                    </div>
+
+                    <!-- Item: Facebook -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-primary"><i class="fa-brands fa-facebook"></i></div>
+                                <span class="fw-bold small">فيسبوك</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-facebook">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                        </div>
+                    </div>
+
+                    <!-- Item: WhatsApp -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-success"><img src="../assets/icons/whatsapp.svg"
+                                        width="24" height="24" alt="WhatsApp"></div>
+                                <span class="fw-bold small">واتساب</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-whatsapp">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                        </div>
+                    </div>
+
+                    <!-- Item: Telegram -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-info"><i class="fa-brands fa-telegram"></i></div>
+                                <span class="fw-bold small">تلجرام</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-telegram">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                        </div>
+                    </div>
+
+                    <!-- Item: Snapchat -->
+                    <div class="platform-item mb-2 bg-light rounded-3 shadow-sm p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="platform-icon text-warning"><img src="../assets/icons/snapchat.svg"
+                                        width="24" height="24" alt="Snapchat"></div>
+                                <span class="fw-bold small">سناب شات</span>
+                            </div>
+                            <div class="form-check form-switch m-0 p-0">
+                                <input class="form-check-input toggle-custom m-0 shadow-none border-0 float-end"
+                                    type="checkbox" role="switch" id="switch-snapchat">
+                            </div>
+                        </div>
+                        <div class="platform-input-container">
+                            <input type="text" class="form-control border-0 mt-2" placeholder="ادخل رابط حسابك">
+                        </div>
+                    </div>
+
+                    <!-- Add Other Platform -->
+                    <div class="other-platform-section">
+                        <div class="platform-item mb-4 bg-light rounded-3 p-3  border bg-light cursor-pointer text-muted"
+                            id="btn-other-platform">
+                            <i class="fa-solid fa-plus-circle me-1"></i> منصة أخرى
+                        </div>
+
+                        <!-- Expanded Form (Hidden by default) -->
+                        <div class="other-platform-form mb-4 bg-light rounded-3 p-4 border d-none"
+                            id="form-other-platform">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h6 class="fw-bold text-dark m-0">منصة أخرى</h6>
+                                <button type="button" class="btn-close small" id="close-other-platform"></button>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-muted small fw-bold">اسم المنصة</label>
+                                <input type="text" class="form-control bg-white border-0 py-2"
+                                    placeholder="ادخل اسم المنصة">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small fw-bold">رابط حسابك</label>
+                                <input type="text" class="form-control bg-white border-0 py-2"
+                                    placeholder="ادخل رابط حسابك">
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+
+                <!-- Actions -->
+                <div class="d-flex justify-content-between align-items-center mt-5 mb-5">
+                    <a href="basic_info.html" class="btn btn-outline-secondary px-5 py-2 rounded-3">السابق</a>
+                    <a href="interests.html" class="btn btn-main px-5 py-2 rounded-3 text-white fw-bold">التالي</a>
+                </div>
+
             </div>
         </div>
+    </div>
 
     </div>
 
